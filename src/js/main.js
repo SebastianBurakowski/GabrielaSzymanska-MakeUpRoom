@@ -1,4 +1,5 @@
-let aboutSection;
+let headerText;
+let headerSpan
 
 
 const prepareDomElements = () => {
@@ -6,7 +7,8 @@ const prepareDomElements = () => {
     //////// POBIERANIE ELEMENTÓW STRONY //////
 
 
-    aboutSection = document.querySelector('.about')
+    headerText = document.querySelector('.header__title')
+    headerSpan = document.querySelector('.header__span')
 
 }
 

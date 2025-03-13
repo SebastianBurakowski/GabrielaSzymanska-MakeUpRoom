@@ -8,7 +8,12 @@
 @use '../variables' as *;
 
 @media (min-width: 768px) {
-
+    .header {
+            &__title {
+                font-size: 2.3rem;
+                margin-top: 17em;
+            }
+        }
 
 }
 
@@ -16,7 +21,7 @@
 
 
 
-
+//DESKTOP
 
 
 @media (min-width : 992px) {
