@@ -9,11 +9,11 @@
 
 @media (min-width: 768px) {
     .header {
-            &__title {
-                font-size: 2.3rem;
-                margin-top: 17em;
-            }
+        &__title {
+            font-size: 2.3rem;
+            margin-top: 17em;
         }
+    }
 
 }
 
@@ -25,20 +25,228 @@
 
 
 @media (min-width : 992px) {
-  
+    .hidden {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+    }
+
+    .google {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .title {
+
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+
+    }
+
+    .burger-btn {
+        display: none;
+    }
+
+    .header {
+        background-color: $pure-white;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__mobile {
+            display: none;
+        }
+
+        &__desktop {
+            display: block;
+        }
+
+
+
+        &__hero {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 1;
+            z-index: -1;
+        }
+
+        &__title {
+
+            text-align: right;
+            margin-top: 0;
+            font-weight: normal;
+            font-size: 4.5rem;
+            color: $dark;
+            padding: 0;
+
+
+        }
+
+        &__logo {
+            background-image: url(../../../dist/img/Gabriela_Szymańska_LOGO_page-0001.jpg);
+            height: 7em;
+            width: 11em;
+            top: 20px;
+            left: 20px;
+        }
+
+        &__white {
+            opacity: 0;
+            text-align: left;
+            font-family: 'Boska', serif;
+            font-weight: normal;
+            text-transform: uppercase;
+            font-size: 4.5rem;
+            color: $pure-white;
+
+        }
+    }
+
+    .navbar {
+
+&__mobile{
+    display: none;
 }
+
+        &__desktop {
+            display: block;
+            font-family: 'Boska', serif;
+            font-weight: normal;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .5em;
+            box-shadow: 0px 5px 10px $light-white;
+        }
+
+        &__main {
+            width: 60%;
+        }
+
+        &__list {
+
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+
+
+        }
+
+        &__item {
+            flex: 1;
+
+            text-align: center;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 1rem;
+            padding: .5em;
+            border-right: 1px solid $dark;
+
+            &--link {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                color: $dark;
+                text-decoration: none;
+                cursor: pointer;
+                transition: transform 1s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+            }
+
+
+
+        }
+
+        &__extra {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 30%;
+        }
+
+        &__shop {
+            width: 50%;
+            border-right: 1px solid $dark;
+
+            &--icon {
+                display: inline-block;
+                text-align: center;
+                font-size: 1rem;
+                color: $dark;
+                text-transform: uppercase;
+                width: 100%;
+                text-decoration: none;
+                cursor: pointer;
+                transition: transform 1s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+            }
+
+        }
+
+
+        &__instagram,
+        &__facebook {
+            
+            text-decoration: none;
+            color: $dark;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 1s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &__socials {
+            font-size: 2rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 50%;
+        }
+
+    }
+
+
+
+
+}
+
 
 //--900--//
 
-@media (min-width: 900px) {
-
-    
-}
+@media (min-width: 900px) {}
 
 //--1024--//
 
-@media (min-width: 1024px) {
-
-   
-
-}
+@media (min-width: 1024px) {}

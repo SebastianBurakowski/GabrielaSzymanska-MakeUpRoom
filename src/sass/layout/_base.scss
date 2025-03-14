@@ -2,8 +2,12 @@
 @use '../variables' as *;
 
 // Mobile Burger
+.home {
+    position: relative;
+}
 
 .burger-btn {
+    display: block;
     position: fixed;
     top: 10px;
     right: 10px;
@@ -26,49 +30,93 @@
         position: relative;
         width: 40px;
         height: 30px;
+        transition: background-color 1s;
     }
 
-    &__bars,
-    &__bars::after,
-    &__bars::before {
-        position: absolute;
-        right: 0;
-        content: '';
-        height: 1px;
-        background-color: $pure-white;
-        transition: width .3s;
-    }
+    // &__bars,
+    // &__bars::after,
+    // &__bars::before {
+    //     position: absolute;
+    //     right: 0;
+    //     content: '';
+    //     height: 1px;
+    //     background-color: $pure-white;
+    //     transition: width .3s;
+    // }
 
-    &__bars {
-        width: 100%;
+    // &__bars {
+    //     width: 100%;
 
-        &::after {
-            width: 100%;
-            top: 13px;
-        }
+    //     &::after {
+    //         width: 100%;
+    //         top: 13px;
+    //     }
 
-        &::before {
-            width: 100%;
-            top: 27px;
-            transition-delay: .1s;
-        }
-    }
+    //     &::before {
+    //         width: 100%;
+    //         top: 27px;
+    //         transition-delay: .1s;
+    //     }
+    // }
 
-    .black-bars-color,
-    .black-bars-color::after,
-    .black-bars-color::before {
-        background-color: $dark;
+    .black-bars-color{
+        .bar__one,
+            .bar__two,
+            .bar__three{
+                background-color: $dark
+            }
+        
 
     }
 }
 
+.bar__one,
+.bar__two,
+.bar__three {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: $pure-white;
+    transition: width .3s;
+}
+
+.bar__one {
+    top: 0;
+    left: 0;
+    transition: transform 1s, opacity 1s;
+}
+
+.bar__two {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: transform 1s;
+}
+
+.bar__three {
+    bottom: 0;
+    left: 0;
+    transition: transform 1s, bottom 1s;
+}
+
 .burger-active {
-    .burger-btn__bars::after {
-        width: 60%;
+    .bar__one {
+        transform: translateY(50px);
+        opacity: 0;
     }
 
-    .burger-btn__bars::before {
-        width: 30%;
+    .bar__two {
+        transform: rotate(45deg);
+        transform-origin: center;
+
+    }
+
+    .bar__three {
+        transform: rotate(-45deg);
+        transform-origin: center;
+        bottom: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+
     }
 }
 
@@ -79,6 +127,16 @@
     height: 100vh;
     background-color: $dark;
     overflow: hidden;
+
+    &__mobile {
+        display: block;
+    }
+
+    &__desktop {
+        display: none;
+    }
+
+
 
     &__hero {
         background-image: url(../../../dist/img/szkolenia2.jpg);
@@ -129,6 +187,14 @@
         animation: logoAnimation 3s ease-in-out forwards;
 
     }
+
+    &__white {
+        animation: headerAnimation 2s 1s ease-in-out forwards;
+
+        &--second {
+            animation: headerAnimation 2s 2.5s ease-in-out forwards;
+        }
+    }
 }
 
 // Header Animations
@@ -157,5 +223,110 @@
         opacity: 1;
         transform: translateY(0);
     }
+
+}
+
+.navbar {
+    &__desktop {
+        display: none;
+    }
+
+    &__mobile {
+        position: relative;
+        z-index: 999;
+        display: block;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        position: fixed;
+        background-color: $pure-white;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
+
+
+    }
+
+    &__item {
+        &--link {
+            font-size: 1.6rem;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            padding: .5em 1em;
+            color: $dark;
+            font-family: 'Boska', serif;
+            font-weight: normal;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+
+
+        }
+    }
+
+    &__shop {
+        &--icon {
+
+            position: absolute;
+            bottom: .5em;
+            left: .5em;
+            font-size: 1.2rem;
+            font-family: 'Boska', serif;
+            font-weight: normal;
+            color: $dark;
+            text-transform: uppercase;
+            padding: .5em;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+    }
+
+    &__socials {
+        position: absolute;
+        bottom: .5em;
+        right: .5em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 20%;
+    }
+
+    &__instagram,
+    &__facebook {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $dark;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+}
+
+
+.navbarActive {
+    opacity: 1;
+
 
 }

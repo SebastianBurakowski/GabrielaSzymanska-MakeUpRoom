@@ -4,3 +4,15 @@
 @media (min-width: 1400px) {
 
 }
+
+
+@media (min-width: 1800px) {
+        .header {
+        
+                &__title,
+                &__white {
+                    font-size: 7rem;
+                }
+        
+            }
+}

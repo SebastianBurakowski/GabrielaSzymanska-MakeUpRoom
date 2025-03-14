@@ -1,25 +1,36 @@
-let headerText;
-let headerSpan
-
+let burgerBtn;
+let burgerBars;
+let mobileNav;
 
 const prepareDomElements = () => {
 
     //////// POBIERANIE ELEMENTÓW STRONY //////
 
 
-    headerText = document.querySelector('.header__title')
-    headerSpan = document.querySelector('.header__span')
+   
+    burgerBtn = document.querySelector('.burger-btn')
+    burgerBars = document.querySelector('.burger-btn__bars')
+    mobileNav = document.querySelector('.navbar__mobile')
 
 }
 
 //FUNCTIONS
+
+const burgerHandle = () => {
+    
+    burgerBtn.classList.toggle('burger-active')
+    burgerBars.classList.toggle('black-bars-color')
+    mobileNav.classList.toggle('navbarActive');
+}
+
 
 
 
 const prepareDomEvents = () => {
 
     ////////// WYWOŁANIE FUNKCJI ///////////////////
-    window.addEventListener("scroll", handleScroll);
+   
+    burgerBtn.addEventListener("click", burgerHandle)
 
 }
 

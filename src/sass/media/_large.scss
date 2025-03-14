@@ -6,6 +6,26 @@
 
 @media (min-width: 1200px) {
 
-    
+    .header {
+
+        &__title,
+        &__white {
+            font-size: 5rem;
+        }
+
+    }
+
+    .navbar {
+        &__item {
+            font-size: 1.2rem;
+        }
+
+        &__shop {
+            &--icon {
+                font-size: 1.2rem;
+            }
+
+        }
+    }
 
 }
