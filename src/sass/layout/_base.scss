@@ -59,13 +59,14 @@
     //     }
     // }
 
-    .black-bars-color{
+    .black-bars-color {
+
         .bar__one,
-            .bar__two,
-            .bar__three{
-                background-color: $dark
-            }
-        
+        .bar__two,
+        .bar__three {
+            background-color: $dark
+        }
+
 
     }
 }
@@ -103,6 +104,7 @@
     .bar__one {
         transform: translateY(50px);
         opacity: 0;
+
     }
 
     .bar__two {
@@ -232,9 +234,9 @@
     }
 
     &__mobile {
+        display: none;
         position: relative;
         z-index: 999;
-        display: block;
         opacity: 0;
         transition: opacity 1s ease-in-out;
         position: fixed;
@@ -243,10 +245,7 @@
         left: 0;
         width: 100%;
         height: 90vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+
     }
 
     &__main {
@@ -326,7 +325,143 @@
 
 
 .navbarActive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     opacity: 1;
 
 
+}
+
+
+//ABOUT
+
+.about {
+
+    &__text {
+        opacity: 0;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+
+
+    &__photo {
+        opacity: 0;
+        width: 100%;
+        box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
+        margin-bottom: 1em;
+
+    }
+
+    @keyframes photoAnimation {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    .activeAnimation {
+
+        animation: photoAnimation 2s ease-in-out forwards;
+    }
+
+    .activeSecondAnimation {
+
+        animation: photoAnimation 2s 1s ease-in-out forwards;
+    }
+}
+
+//HERO
+
+.hero {
+    width: 100%;
+    height: 100vh;
+
+    &__desktop {
+        display: none;
+    }
+
+    &__mobile {
+        margin-top: 2em;
+    }
+
+    &__container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            height: 100%;
+            width: 1px;
+            background-color: $dark;
+        }
+    }
+
+    &__background {
+
+        box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
+        width: 40%;
+        height: 40%;
+
+        &--first {
+            opacity: 0;
+            position: absolute;
+            top: 50px;
+            left: 5%;
+            background-image: url('../../../dist/img/shop.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+
+        }
+
+        &--second {
+            opacity: 0;
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+            background-image: url('../../../dist/img/shop.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+}
+
+@keyframes heroAnimation {
+    0% {
+        opacity: 0;
+       
+    }
+
+    100% {
+        opacity: 1;
+        
+    }
+
+}
+
+.heroAvtive{
+    animation: heroAnimation 2s ease-in-out forwards;
+}
+
+.heroDelay{
+    animation: heroAnimation 2s 1s ease-in-out forwards;
 }

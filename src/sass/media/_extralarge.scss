@@ -2,6 +2,20 @@
 
 
 @media (min-width: 1400px) {
+    .about{
+        &__photo{
+            width: 45%;
+        }
+
+
+        &__text{
+            width: 50%;
+            &::after{
+                height: 150%;
+                left: -2em;
+            }
+        }
+    }
 
 }
 
