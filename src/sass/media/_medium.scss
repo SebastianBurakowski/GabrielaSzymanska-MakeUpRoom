@@ -122,11 +122,12 @@
 
     .navbar {
 
-&__mobile{
-    display: none;
-}
+        &__mobile {
+            display: none;
+        }
 
         &__desktop {
+            position: static;
             display: block;
             font-family: 'Boska', serif;
             font-weight: normal;
@@ -138,8 +139,12 @@
         }
 
         &__main {
+            display: block;
+
             width: 60%;
         }
+
+
 
         &__list {
 
@@ -148,6 +153,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: row;
+            height: 100%;
 
 
 
@@ -155,21 +161,15 @@
 
         &__item {
             flex: 1;
-
             text-align: center;
             position: relative;
             text-transform: uppercase;
             font-size: 1rem;
-            padding: .5em;
             border-right: 1px solid $dark;
 
             &--link {
-                display: inline-block;
-                width: 100%;
+                font-size: 1rem;
                 height: 100%;
-                color: $dark;
-                text-decoration: none;
-                cursor: pointer;
                 transition: transform 1s;
 
                 &:hover {
@@ -194,16 +194,12 @@
             border-right: 1px solid $dark;
 
             &--icon {
+                position: static;
                 display: inline-block;
                 text-align: center;
-                font-size: 1rem;
-                color: $dark;
-                text-transform: uppercase;
-                width: 100%;
-                text-decoration: none;
-                cursor: pointer;
+                font-size: 1rem;               
+                width: 100%;             
                 transition: transform 1s;
-
                 &:hover {
                     transform: scale(1.1);
                 }
@@ -215,11 +211,6 @@
 
         &__instagram,
         &__facebook {
-            
-            text-decoration: none;
-            color: $dark;
-            cursor: pointer;
-            text-transform: uppercase;
             transition: transform 1s;
 
             &:hover {
@@ -228,10 +219,8 @@
         }
 
         &__socials {
+            position: static;
             font-size: 2rem;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
             width: 50%;
         }
 
