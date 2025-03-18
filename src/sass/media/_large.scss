@@ -28,10 +28,42 @@
         }
     }
 
-    .about{
-        &__text{
+    .about {
+        &__text {
             font-size: 1.3rem;
         }
     }
 
+
+    .offers {
+        &::before {
+
+            top: 63%;
+
+            height: 81%;
+
+        }
+
+        &__container {
+            &--main {
+                width: 350px;
+                height: 350px;
+
+            }
+
+            &--first {
+                height: 500px;
+            }
+        }
+    }
+
+    .offer {
+        &__text {
+            font-size: 1.8rem;
+
+            &--secondary {
+                font-size: 1.3rem;
+            }
+        }
+    }
 }

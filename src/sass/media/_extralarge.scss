@@ -2,31 +2,93 @@
 
 
 @media (min-width: 1400px) {
-    .about{
-        &__photo{
+    .about {
+        &__photo {
             width: 45%;
         }
 
 
-        &__text{
+        &__text {
             width: 50%;
-            &::after{
+
+            &::after {
                 height: 150%;
                 left: -2em;
             }
         }
     }
 
+    .offers {
+        &::before {
+
+            top: 61%;
+
+            height: 82%;
+
+        }
+
+        &__container {
+
+
+            &--main {
+                width: 450px;
+                height: 450px;
+
+            }
+
+            &--first {
+                height: 600px;
+            }
+        }
+    }
+
+    .offer {
+        &__text {
+            font-size: 2rem;
+
+            &--secondary {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .shop {
+        &__title,
+        &__link {
+            font-size: 3.5rem;
+            bottom: 1em;
+        }
+        
+        &__photo {
+            width: 15vw;
+            height: 60vh;
+
+            &--first {
+                top: 2em;
+                left: 5em;
+            }
+
+            &--second {
+
+                bottom: 1em;
+                right: 5em;
+
+
+            }
+        }
+    }
 }
 
 
+
+
 @media (min-width: 1800px) {
-        .header {
-        
-                &__title,
-                &__white {
-                    font-size: 7rem;
-                }
-        
-            }
+    .header {
+
+        &__title,
+        &__white {
+            font-size: 7rem;
+        }
+
+    }
 }

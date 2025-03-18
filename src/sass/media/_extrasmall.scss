@@ -1,12 +1,29 @@
-
-
-
 //--390--//
-
+@media (min-width: 340px) {
+    .shop {
+        &__link {
+            padding: .5em;
+        }
+    }
+}
 
 @media (min-width: 390px) {
+    .shop {
+        &__link {
+            padding: .5em 1em;
+        }
 
-    
+        &__photo {
+            height: 60vh;
+        }
+
+        &__widget{
+            margin-top: 1em;
+        }
+    }
+
+
+
 }
 
 
@@ -16,14 +33,14 @@
 
 @media (min-width: 430px) {
 
- 
-.header{
-    &__title{
-        margin-top: 20em;
-        font-size: 1.9rem;
-        
+
+    .header {
+        &__title {
+            margin-top: 20em;
+            font-size: 1.9rem;
+
+        }
     }
-}
-    
+
 
 }
