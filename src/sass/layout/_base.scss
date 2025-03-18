@@ -486,6 +486,7 @@
         flex-direction: column;
 
         &--main {
+            opacity: 0;
             width: 90vw;
             height: 100vw;
             margin-bottom: 2em;
@@ -501,6 +502,19 @@
     }
 }
 
+@keyframes offerAnimation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.activeOffer{
+    animation: offerAnimation 2s ease-in-out forwards;
+}
 
 
 .offer {
@@ -635,8 +649,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
+        opacity: 0;
 
         &--first {
+            
             background-image: url('../../../dist/img/shop.jpg');
         }
 
@@ -670,4 +686,20 @@
             background-color: $light-white;
         }
     }
+}
+
+@keyframes shopAnimation {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+.activeShop{
+    animation: shopAnimation 2s ease-in-out forwards;
 }
