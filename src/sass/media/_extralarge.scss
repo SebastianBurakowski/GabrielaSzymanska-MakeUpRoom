@@ -104,6 +104,12 @@
             }
         }
     }
+
+    .contact{
+        &__container{
+            background-attachment: fixed;
+        }
+    }
 }
 
 
