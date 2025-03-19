@@ -67,20 +67,37 @@
         }
     }
 
-    .courses{
-            &__photo {
-            
-                    
-                    height: 45vh;
+    .courses {
+        &__photo {
 
-                    &--second{
-                        top: -5%;
-                    }
 
-                    &--first,
-                    &--third{
-                        bottom: -15%;
-                    }
+            height: 45vh;
+
+            &--second {
+                top: -5%;
             }
+
+            &--first,
+            &--third {
+                bottom: -15%;
+            }
+        }
+    }
+
+    .review {
+        margin-top: 6em;
+        &__slick {
+            &--right {
+                width: 60px;
+                height: 60px;
+
+            }
+
+            &--img {
+                width: 60px;
+                height: 60px;
+            }
+
+        }
     }
 }

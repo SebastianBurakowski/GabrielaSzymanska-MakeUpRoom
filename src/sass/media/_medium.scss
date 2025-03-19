@@ -15,6 +15,23 @@
         }
     }
 
+    .review {
+        &__slick {
+            &--right {
+                width: 40px;
+                height: 40px;
+
+            }
+
+            &--img {
+                width: 40px;
+                height: 40px;
+            }
+
+
+        }
+    }
+
 }
 
 
@@ -529,14 +546,14 @@
 
         &__link {
             &--desktop {
-          
+
                 top: 80%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 30%;
-                cursor:pointer;
+                cursor: pointer;
 
-                &::after{
+                &::after {
                     position: absolute;
                     content: '';
                     bottom: 0;
@@ -590,6 +607,19 @@
                 bottom: 0;
                 background-image: url('../../../dist/img/szkolenia5.jpg');
             }
+        }
+    }
+
+    .review {
+   
+        &__header {
+            font-size: 1.5rem;
+
+        }
+
+        &__text {
+            width: 50%;
+            font-size: 1.2rem;
         }
     }
 }

@@ -710,10 +710,10 @@
 //COURSES
 
 .courses {
-   
+
     width: 100%;
 
-    &__desktop{
+    &__desktop {
         display: none;
     }
 
@@ -750,7 +750,7 @@
         margin-bottom: 1.5em;
         padding: .5em;
         width: 100%;
-      
+
     }
 
     &__span {
@@ -759,16 +759,109 @@
 }
 
 @keyframes coursesAnimation {
-    0%{
+    0% {
         opacity: 0;
     }
 
-    100%{
+    100% {
         opacity: 1;
     }
-    
+
 }
 
-.coursesActive{
+.coursesActive {
     animation: coursesAnimation 1s ease-in-out forwards;
+}
+
+//Reviews
+
+.review {
+    margin-top: 4em;
+
+    &__boxes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__header {
+
+        text-align: left;
+        font-size: 1rem;
+        font-family: 'Boska';
+        font-weight: normal;
+        padding: 0 1em;
+        margin-bottom: 1em;
+    }
+
+    &__link {
+        color: $dark;
+        text-decoration: none;
+
+        padding: .5em;
+
+    }
+
+    &__text {
+        text-align: center;
+        position: relative;
+        font-size: .8rem;
+        padding: 1em 0;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 20%;
+            background-color: $dark;
+        }
+
+        &::before {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__info {
+        min-height: 40vh;
+        max-height: 40vh;
+        position: relative;
+        padding: 2em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 90%;
+            background-color: $dark;
+        }
+
+        &::before {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
