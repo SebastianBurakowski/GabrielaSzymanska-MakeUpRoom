@@ -4,7 +4,7 @@
 @media (min-width: 1400px) {
     .about {
         &__photo {
-            width: 45%;
+            width: 40%;
         }
 
 
@@ -53,12 +53,13 @@
     }
 
     .shop {
+
         &__title,
         &__link {
             font-size: 3.5rem;
             bottom: 1em;
         }
-        
+
         &__photo {
             width: 15vw;
             height: 60vh;
@@ -74,6 +75,32 @@
                 right: 5em;
 
 
+            }
+        }
+    }
+
+    .courses {
+        margin-top: 3em;
+
+        &__link{
+            font-size: 3rem;
+        }
+        &__photo {
+
+            width: 15vw;
+            height: 50vh;
+
+            &--second {
+                top: -10%;
+            }
+
+            &--first{
+                left: 10%;
+                bottom: -15%;
+            }
+            &--third {
+                right: 10%;
+                bottom: -15%;
             }
         }
     }

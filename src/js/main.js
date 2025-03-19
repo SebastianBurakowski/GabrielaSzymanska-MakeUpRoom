@@ -13,6 +13,9 @@ let offerSection
 let offerElements;
 let shopSection;
 let ShopImages;
+let coursesSectionMobile;
+let coursesSectionDesktop;
+let coursesImages;
 
 const prepareDomElements = () => {
 
@@ -35,6 +38,9 @@ const prepareDomElements = () => {
     offerElements = document.querySelectorAll('.offers__container--main')
     shopSection = document.querySelector('.shop')
     ShopImages = document.querySelectorAll('.shop__photo')
+    coursesSectionMobile = document.querySelector('.courses__mobile')
+    coursesSectionDesktop = document.querySelector('.courses__desktop')
+    coursesImages = document.querySelectorAll('.courses__photo')
 
 }
 
@@ -116,6 +122,8 @@ const handleShowShop = () => {
         ShopImages.forEach((element, index) => {
             element.style.animationDelay = `${index}s`
             element.classList.add('activeShop')
+            console.log("object");
+            
         })
     } else {
         ShopImages.forEach(element => {
@@ -130,6 +138,35 @@ const handleShowShop = () => {
 
 
 
+const handleShowCourses = () => {
+    const windowHeight = window.innerHeight;
+
+    if (coursesSectionMobile) {
+        const coursesMobileTop = coursesSectionMobile.getBoundingClientRect().top;
+        if (coursesMobileTop <= windowHeight * 0.8) {
+            coursesSectionMobile.classList.add('coursesActive');
+        }
+    }
+
+    if (coursesSectionDesktop) {
+        const coursesDesktopTop = coursesSectionDesktop.getBoundingClientRect().top;
+        if (coursesDesktopTop <= windowHeight * 0.8) {
+            coursesImages.forEach((element, index) => {
+                if (!element.classList.contains('coursesActive')) {
+                    element.style.animationDelay = `${index * 0.3}s`;
+                    element.classList.add('coursesActive');
+                }
+            });
+        }
+    }
+}
+
+// Nasłuchiwanie scrolla
+
+
+
+
+
 const prepareDomEvents = () => {
 
     ////////// WYWOŁANIE FUNKCJI ///////////////////
@@ -140,6 +177,7 @@ const prepareDomEvents = () => {
     window.addEventListener('scroll', heroHandle)
     window.addEventListener('scroll', handleShowOffer);
     window.addEventListener('scroll', handleShowShop);
+    window.addEventListener('scroll', handleShowCourses);
 
 }
 

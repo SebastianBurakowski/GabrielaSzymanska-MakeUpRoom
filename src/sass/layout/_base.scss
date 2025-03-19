@@ -371,12 +371,12 @@
 
     .activeAnimation {
 
-        animation: photoAnimation 2s ease-in-out forwards;
+        animation: photoAnimation 1s ease-in-out forwards;
     }
 
     .activeSecondAnimation {
 
-        animation: photoAnimation 2s 1s ease-in-out forwards;
+        animation: photoAnimation 1s 1s ease-in-out forwards;
     }
 }
 
@@ -503,17 +503,18 @@
 }
 
 @keyframes offerAnimation {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
-    
+
 }
 
-.activeOffer{
-    animation: offerAnimation 2s ease-in-out forwards;
+.activeOffer {
+    animation: offerAnimation 1.5s ease-in-out forwards;
 }
 
 
@@ -652,7 +653,7 @@
         opacity: 0;
 
         &--first {
-            
+
             background-image: url('../../../dist/img/shop.jpg');
         }
 
@@ -668,6 +669,7 @@
         align-items: center;
         flex-direction: column;
         text-align: center;
+        margin-bottom: 1em;
     }
 
     &__link {
@@ -682,24 +684,91 @@
         border: 1px solid $dark;
         transition: background-color 1s;
 
-        &:hover{
+        &:hover {
             background-color: $light-white;
         }
     }
 }
 
 @keyframes shopAnimation {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(0);
+    }
+
+}
+
+.activeShop {
+    animation: shopAnimation 2s ease-in-out forwards;
+}
+
+//COURSES
+
+.courses {
+   
+    width: 100%;
+
+    &__desktop{
+        display: none;
+    }
+
+    &__photo {
+        opacity: 0;
+        z-index: 4;
+        position: relative;
+        display: inline-block;
+        margin-top: 1em;
+        width: 100%;
+        height: 70vh;
+        background-image: url('../../../dist/img/szkolenia5.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__link {
+
+        position: absolute;
+        bottom: -17%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 1.8rem;
+        color: $dark;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Boska', serif;
+        font-weight: normal;
+        cursor: pointer;
+        margin-bottom: 1.5em;
+        padding: .5em;
+        width: 100%;
+      
+    }
+
+    &__span {
+        color: $pure-white;
+    }
+}
+
+@keyframes coursesAnimation {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
     }
     
 }
 
-.activeShop{
-    animation: shopAnimation 2s ease-in-out forwards;
+.coursesActive{
+    animation: coursesAnimation 1s ease-in-out forwards;
 }
