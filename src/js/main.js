@@ -16,6 +16,8 @@ let ShopImages;
 let coursesSectionMobile;
 let coursesSectionDesktop;
 let coursesImages;
+let navMobileItems;
+
 
 const prepareDomElements = () => {
 
@@ -41,11 +43,16 @@ const prepareDomElements = () => {
     coursesSectionMobile = document.querySelector('.courses__mobile')
     coursesSectionDesktop = document.querySelector('.courses__desktop')
     coursesImages = document.querySelectorAll('.courses__photo')
+    navMobileItems = document.querySelectorAll('.navbar__item')
+    
 
 }
 
 //FUNCTIONS
 const windowHeight = window.innerHeight;
+
+
+
 
 
 const burgerHandle = () => {
@@ -161,6 +168,16 @@ const handleShowCourses = () => {
     }
 }
 
+ const handleCloseNav = () => {
+
+
+
+    mobileNav.classList.remove('navbarActive')
+     burgerBtn.classList.remove('burger-active')
+     burgerBars.classList.remove('black-bars-color')
+    
+ }
+
 // Nasłuchiwanie scrolla
 
 
@@ -178,6 +195,8 @@ const prepareDomEvents = () => {
     window.addEventListener('scroll', handleShowOffer);
     window.addEventListener('scroll', handleShowShop);
     window.addEventListener('scroll', handleShowCourses);
+    navMobileItems.forEach(el => el.addEventListener('click', handleCloseNav))
+ 
 
 }
 

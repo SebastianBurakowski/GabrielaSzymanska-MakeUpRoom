@@ -611,7 +611,7 @@
     }
 
     .review {
-   
+
         &__header {
             font-size: 1.5rem;
 
@@ -622,6 +622,54 @@
             font-size: 1.2rem;
         }
     }
+
+    .contact {
+        &__container {
+            flex-direction: row;
+            background-attachment: fixed;
+            
+        }
+
+        &__header {
+            font-size: 3.5rem;
+        }
+
+
+    }
+
+    .form-group input,
+    .form-group textarea {
+
+        width: 60%;
+    }
+
+    .right {
+        flex-direction: column;
+        width: 20%;
+
+
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 50%;
+
+        font-size: 2.5rem;
+
+    }
+
+    .middle h2 {
+        font-size: 3rem;
+    }
+
+        .phone {
+    
+            font-size: 2rem;
+ 
+        }
 }
 
 

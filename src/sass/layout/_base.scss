@@ -59,27 +59,32 @@
     //     }
     // }
 
-    .black-bars-color {
+    .bar__one,
+    .bar__two,
+    .bar__three {
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: rgb(116, 115, 115);
+        transition: width .3s;
+    }
 
-        .bar__one,
-        .bar__two,
-        .bar__three {
-            background-color: $dark
-        }
+    .burger-btn__bars.white-bars-color .bar__one,
+    .burger-btn__bars.white-bars-color .bar__two,
+    .burger-btn__bars.white-bars-color .bar__three {
+        background-color: #ffffff;
+        transition: background-color 0.3s ease;
+    }
 
-
+    .burger-btn__bars.black-bars-color .bar__one,
+    .burger-btn__bars.black-bars-color .bar__two,
+    .burger-btn__bars.black-bars-color .bar__three {
+        background-color: #000000;
+        transition: background-color 0.3s ease;
     }
 }
 
-.bar__one,
-.bar__two,
-.bar__three {
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    background-color: $pure-white;
-    transition: width .3s;
-}
+
 
 .bar__one {
     top: 0;
@@ -229,12 +234,17 @@
 }
 
 .navbar {
+    transition: opacity 1s;
+
     &__desktop {
         display: none;
     }
 
     &__mobile {
-        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
         position: relative;
         z-index: 999;
         opacity: 0;
@@ -325,12 +335,8 @@
 
 
 .navbarActive {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    opacity: 1;
 
+    opacity: 1;
 
 }
 
@@ -870,21 +876,24 @@
 //KONTAKT
 
 .contact {
+    overflow: hidden;
+
     &__header {
         color: $pure-white;
         font-family: 'Boska';
         font-weight: normal;
         text-transform: uppercase;
+        text-align: center;
     }
 
-    &__background{
+    &__background {
         z-index: -1;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        
+
         background-color: black;
         opacity: .5;
     }
@@ -892,6 +901,7 @@
     &__container {
         position: relative;
         display: flex;
+        flex-direction: column;
         width: 100%;
         height: 100vh;
         background: url('../../../dist/img/szkolenia1.jpg') no-repeat center center/cover;
@@ -910,11 +920,11 @@
     flex-direction: column;
     justify-content: center;
     border-right: 1px solid $pure-white;
-   
+
 }
 
 .middle h2 {
-    font-size: 28px;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
@@ -936,7 +946,7 @@
 .form-group input,
 .form-group textarea {
 
-    width: 60%;
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid $pure-white;
@@ -960,7 +970,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 1s;
-    
+
 }
 
 .btn:hover {
@@ -968,37 +978,34 @@
 }
 
 .right {
-    
-    height: 80%;
     font-family: 'Boska';
-    font-weight: normal;
-    flex: 0.5;
+    font-weight: lighter;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 50px 20px;
+    margin-bottom: 1em;
 
 }
 
 .social-icons {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 20px;
-    font-size: 3rem;
-    height: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    font-size: 1.5rem;
+
 }
 
 .social-icons a {
-    color: $pure-white;;
+    color: $pure-white;
+    ;
     text-decoration: none;
 }
 
 .phone {
 
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: normal;
     color: $pure-white;
     text-decoration: none;
     cursor: pointer;

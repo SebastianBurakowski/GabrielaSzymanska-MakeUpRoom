@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 
-<body class="home">
+<body class="home" id="home">
     <button class="burger-btn">
     <div class="burger-btn__box">
         <div class="burger-btn__bars">
@@ -26,7 +26,7 @@
 </button>
 
     <header class="header header__mobile">
-        <div class="header__hero"></div>
+        <div class="header__hero background__hero"></div>
         <div class="header__logo"></div>
         <h1 class="header__title">Gabriela Szymańska <br><span class="header__span">MakeUp Room</span></h1>
     </header>
@@ -53,11 +53,12 @@
     <nav class="navbar__mobile">
         <div class="navbar__main">
             <ul class="navbar__list">
-                <li class="navbar__item"><a class="navbar__item--link" href="">home</a></li>
-                <li class="navbar__item"><a class="navbar__item--link" href="">o mnie</a></li>
-                <li class="navbar__item"><a class="navbar__item--link" href="">oferta</a></li>
-                <li class="navbar__item"><a class="navbar__item--link" href="">szkolenia</a></li>
-                <li class="navbar__item"><a class="navbar__item--link" href="">opinie</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#home">home</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#about">o mnie</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#offer">oferta</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#courses--mobile">szkolenia</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#reviews">opinie</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="contact">kontakt</a></li>
             </ul>
         </div>
         <a class="navbar__shop--icon" target="_blank" href="https://cabelloshop.pl/">sklep</a>
@@ -74,11 +75,12 @@
     <nav class="navbar__desktop">
         <div class="navbar__main">
             <ul class="navbar__list">
-                <li class="navbar__item"><a class="navbar__item--link" href="">home</a></li>
-                <li class="navbar__item"><a class="navbar__item--link" href="">o mnie</a></li>
-                <li class="navbar__item"><a class="navbar__item--link" href="">oferta</a></li>
-                <li class="navbar__item"><a class="navbar__item--link" href="">szkolenia</a></li>
-                <li class="navbar__item"><a class="navbar__item--link" href="">opinie</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#home">home</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#about">o mnie</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#offers">oferta</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#courses--desktop">szkolenia</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#reviews">opinie</a></li>
+                <li class="navbar__item"><a class="navbar__item--link" href="#contact">Kontakt</a></li>
             </ul>
         </div>
 
@@ -98,11 +100,11 @@
     </nav>
 
     <div class="wrapper">
-        <main>
+        <main >
             <section class="about section" id="about">
                 <h2 class="about__title section__title">o Mnie</h2>
                 <div class="about__container">
-                    <img class="about__photo" src="../dist/img/omnie.jpg"
+                    <img class="about__photo background__hero" src="../dist/img/omnie.jpg"
                         alt="Zdjęcie Gabrieli Szymańskiej w białej marynarce">
                     <p class="about__text">Cześć! Nazywam się [Twoje Imię] i jestem stylistką fryzur z pasją do
                         tworzenia
@@ -123,7 +125,7 @@
             <section class="hero">
                 <div class="hero__container hero__mobile">
                     <div class="hero__background hero__background--first "></div>
-                    <div class="hero__background hero__background--second"></div>
+                    <div class="hero__background hero__background--second background__hero"></div>
                 </div>
                 <div class="hero__container hero__desktop">
                     <div class="hero__background--desktop">
@@ -138,7 +140,7 @@
             <section id="offers" class="offers section">
                 <h2 class="offers__title section__title">Oferta</h2>
                 <div class="offers__container">
-                    <div class="offers__container--main">
+                    <div class="offers__container--main background__hero">
                         <div class="offer__container">
                             <a href="../pakiet-premium-z-dojazdem.html" class="offer__element offer__element--second">
                                 <p class="offer__text">Pakiet premium z dojazdem</p>
@@ -147,7 +149,7 @@
 
                         </div>
                     </div>
-                    <div class="offers__container--main offers__container--first">
+                    <div class="offers__container--main offers__container--first background__hero">
                         <div class="offer__container">
                             <a href="../uslugi-w-salonie.html" class="offer__element offer__element--first">
                                 <p class="offer__text">Usługi w salonie</p>
@@ -156,7 +158,7 @@
                         </div>
 
                     </div>
-                    <div class="offers__container--main">
+                    <div class="offers__container--main background__hero">
                         <div class="offer__container">
                             <a href="../pakiet-slubny-za-granica.html" class="offer__element offer__element--third">
                                 <p class="offer__text">Pakiet ślubny za granicą</p>
@@ -182,13 +184,13 @@
                 </div>
             </section>
 
-            <section class="courses section courses__mobile">
+            <section id="courses--mobile" class="courses section courses__mobile">
                 <a href="../szkolenia.html" class="courses__photo">
                     <p class="courses__link"> <span class="courses__link courses__span">Sprawdź moje</span>szkolenia</p>
                 </a>
             </section>
 
-            <section class="courses courses__desktop">
+            <section id="courses--desktop" class="courses courses__desktop">
                 <a class="courses__link courses__link--desktop" href="../szkolenia.html"> Sprawdź moje szkolenia</a>
                 <div class="courses__container">
                     <div class="courses__photo courses__photo--first"></div>
@@ -259,10 +261,10 @@
 
             </section>
 
-            <section class="contact">
+            <section class="contact" id="contact">
                 <h2 class="contact__title section__title">Kontakt</h2>
                 <div class="contact__container">
-                    <div class="contact__background"></div>
+                    <div class="contact__background background__hero"></div>
                     <div class="middle">
                         <h2 class="contact__header">Zostaw wiadomość</h2>
                         <form>
@@ -290,7 +292,7 @@
                             <a href="https://www.instagram.com/gabi.szymanskamakeup/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                             <a href="https://www.facebook.com/gabrielamakeuproom" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         </div>
-                        <a href="12345678" class="phone">123-456-789</a>
+                        <a href="tel:123456789" class="phone">123-456-789</a>
                     </div>
                 </div>
             </section>
