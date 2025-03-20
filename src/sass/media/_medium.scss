@@ -670,6 +670,16 @@
             font-size: 2rem;
  
         }
+
+        .footer{
+         height: 10vh;  
+         &__title{
+            font-size: 1.1rem;
+         } 
+         &__link{
+            font-size: .8rem;
+         }
+        }
 }
 
 
