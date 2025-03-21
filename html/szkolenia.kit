@@ -1,11 +1,141 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gabriela Szymańska | Szkolenia</title>
+    <!-- @include styles.kit -->
 </head>
-<body>
-    szkolenia
+
+<body class="home">
+    <!-- @include menu.kit -->
+
+    <!-- <header class="header header__courses">
+        <div class="header__hero header__hero--courses "></div>
+        <div class="header__logo"></div>
+        <h1 class="header__title header__title--courses">Gabriela Szymańska <br><span class="header__span">Szkolenia</span></h1>
+    </header> -->
+
+    <header class="header header__courses">
+        <div class="header__logo"></div>
+    </header>
+
+    <!-- @include navbar.kit -->
+    <main>
+        <section class="lessons section">
+            <h2 class="lessons__title section__title">Dostępne Szkolenia</h2>
+            <div class="lessons__container">
+                <div class="lesson__container">
+                    <h2 class="lesson__title">Szkolenia Grupowe</h2>
+                    <div class="lesson__schedule">
+                        <ul class="lesson__list">
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">6.04</h2>
+                                <p class="lesson__city">Warszawa</p>
+                                <p class="lesson__info">Wysoki kok/niskie upięcie</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">12.04</h2>
+                                <p class="lesson__city">Katowice</p>
+                                <p class="lesson__info">Niski kuc/Niskie upięcie</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">11.05</h2>
+                                <p class="lesson__city">Ciechanów</p>
+                                <p class="lesson__info">Niski kuc/French Twist</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">18.05</h2>
+                                <p class="lesson__city">Rzeszów</p>
+                                <p class="lesson__info">NISKI KUC/NISKIE UPIĘCIE</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">8.06</h2>
+                                <p class="lesson__city">Wyszków</p>
+                                <p class="lesson__info">KUC/NISKIE UPIĘCIE</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">29.06</h2>
+                                <p class="lesson__city">Warszawa</p>
+                                <p class="lesson__info">NISKI KUC/NISKIE UPIĘCIE</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">20.07</h2>
+                                <p class="lesson__city">Białystok</p>
+                                <p class="lesson__info">KUC/NISKIE UPIĘCIE</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">27.07</h2>
+                                <p class="lesson__city">Kraków</p>
+                                <p class="lesson__info">WYSOKI KUC/NISKIE UPIĘCIE</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <h2 class="lesson__time">CZAS SZKOLENIA 9:00-17:00</h2>
+                    <span class="lesson__span">* godzina zakończenia jest uzależniona od tempa pracy kursantów</span>
+                    <button class="lesson__btn">Zobacz więcej</button>
+                    <div class="lesson__about">
+                        <h2 class="lesson__price"> Koszt Szkolenia : 1000 zł*</h2>
+                        <span class="lesson__span">* Cena szkolenia netto, jeśli życzysz sobie fakturę proszę o wysłanie danych wraz z mailem w wiadomości potwierdzającej
+                        wpłatę zadatku. W takiej sytuacji należy doliczyć +23 % VAT-u do ceny regularnej szkolenia.</span>
+                        <p class="lesson__about--text">POKAZ + PRAKTYKA 2 FRYZUR</p>
+                    </div>
+                    <div class="lesson__timetable">
+                        <h2 class="lesson__timetable--title">Harmonogram</h2>
+                        <ul class="timetable__list">
+                            <li class="timetable__element">9:00 – 10:30 POKAZ</li>
+                            <li class="timetable__element">10:30- 13:00 PRAKTYKA</li>
+                            <li class="timetable__element">13:00 – 13:15 PRZERWA</li>
+                            <li class="timetable__element">13:15 – 14:45 POKAZ</li>
+                            <li class="timetable__element">14:45 – 17:00 PRAKTYKA</li>
+                        </ul>
+                    </div>
+                    <div class="lesson__checklist">
+                        <h2 class="checklist__title">Co Należy ze sobą zabrać</h2>
+                        <ul class="checklist__list">
+                            <li class="checklist__element">grzebień do tapiru ze szpikulcem</li>
+                            <li class="checklist__element">grzebień widelec</li>
+                            <li class="checklist__element">lokówkę 32 mm lub 25 mm prostą</li>
+                            <li class="checklist__element">prostownicę</li>
+                            <li class="checklist__element">wsuwki</li>
+                            <li class="checklist__element">kokówki min 7 cm długości</li>
+                            <li class="checklist__element">lakier suchy mocny do włosów np Silhouette, puder teksturyzujący np zielony Taft, wosk Redken lub volume up Osis nr 2</li>
+                            <li class="checklist__element">patyczki drewniane ( do szaszłyków ) lub druty metalowe ( do szycia )</li>
+                            <li class="checklist__element">modelkę ( włosy minimum do łopatek )</li>
+                            <li class="checklist__element">podkładkę termoochronną pod gorące narzędzia</li>
+                            <li class="checklist__element">klipsy fryzjerskie</li>
+                            <li class="checklist__element">klipsy fryzjerskie metalowe</li>
+                            <li class="checklist__element">gumki fryzjerskie</li>
+                            <li class="checklist__element">wypełniacz</li>
+                        </ul>
+
+                    </div>
+                    <div class="lesson__included">
+                        <h2 class="included__title">Co zapewniam</h2>
+                        <ul class="included__list">
+                            <li class="included__element">Karbownice</li>
+                            <li class="included__element">Lunch, wodę, kawę, herbatę, słodkie oraz słone przekąski</li>
+                            <li class="included__element">Jeśli nie jesteś w stanie zorganizować modelki proszę o wiadomość abyśmy mogli przygotować główkę</li>
+                        </ul>
+                    </div>
+                    <div class="lesson__shop">
+                        <h2 class="shop__title--lesson">UWAGA ! Podczas szkolenia istnieje możliwość zaopatrzenia się we wszystkie akcesoria ( dotyczy to szkoleń stacjonarnych
+                        w Warszawie, jeśli interesuje Cię zakup w innych miastach proszę o wiadomość podczas zapisu )</h2>
+                        <a href="https://cabelloshop.pl/ " target="_blank">kup akcesoria</a>
+                    </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- @include footer.kit -->
 </body>
+
+
+
+
+<!-- @include script.kit -->
+
 </html>

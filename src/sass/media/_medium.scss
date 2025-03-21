@@ -11,7 +11,7 @@
     .header {
         &__title {
             font-size: 2.3rem;
-            margin-top: 17em;
+            
         }
     }
 
@@ -168,7 +168,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: .5em;
+            padding: .2em;
 
             background-color: rgba(255, 255, 255, 0.781);
 
@@ -201,7 +201,7 @@
             text-align: center;
             position: relative;
             text-transform: uppercase;
-            font-size: 1rem;
+            
             border-right: 1px solid $dark;
 
             &--link {
@@ -306,30 +306,34 @@
 
         &__links {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 0;
+            left: 0;
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 50%;
+            justify-content: space-around;
+            align-items: flex-end;
+            width: 100%;
             height: 100%;
         }
 
         &__link {
+            position: relative;
             opacity: 1;
             color: $pure-white;
             text-decoration: none;
             text-transform: uppercase;
             font-family: 'Boska', serif;
             font-weight: normal;
-            border: 1px solid $pure-white;
             margin-bottom: 1em;
-            padding: .5em 1em;
-            transition: background-color 2s;
 
-            &:hover {
-                background-color: $dark;
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 1px;
+                width: 10%;
+                background-color: $pure-white;
             }
         }
 
@@ -352,7 +356,7 @@
                 align-items: flex-end;
                 width: 100%;
                 height: 100%;
-                background-image: url('../../../dist/img/hero.png');
+                background-image: url('../../../dist/img/hero__shop__new.png');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -512,7 +516,6 @@
                 bottom: 1em;
                 right: 1em;
                 display: block;
-                background-image: url('../../../dist/img/IMG_0981-1733257447389.jpeg');
 
             }
         }
@@ -627,7 +630,7 @@
         &__container {
             flex-direction: row;
             background-attachment: fixed;
-            
+
         }
 
         &__header {
@@ -665,21 +668,23 @@
         font-size: 3rem;
     }
 
-        .phone {
-    
-            font-size: 2rem;
- 
+    .phone {
+
+        font-size: 2rem;
+
+    }
+
+    .footer {
+        height: 10vh;
+
+        &__title {
+            font-size: 1.1rem;
         }
 
-        .footer{
-         height: 10vh;  
-         &__title{
-            font-size: 1.1rem;
-         } 
-         &__link{
+        &__link {
             font-size: .8rem;
-         }
         }
+    }
 }
 
 

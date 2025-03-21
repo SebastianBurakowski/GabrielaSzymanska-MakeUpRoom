@@ -33,32 +33,6 @@
         transition: background-color 1s;
     }
 
-    // &__bars,
-    // &__bars::after,
-    // &__bars::before {
-    //     position: absolute;
-    //     right: 0;
-    //     content: '';
-    //     height: 1px;
-    //     background-color: $pure-white;
-    //     transition: width .3s;
-    // }
-
-    // &__bars {
-    //     width: 100%;
-
-    //     &::after {
-    //         width: 100%;
-    //         top: 13px;
-    //     }
-
-    //     &::before {
-    //         width: 100%;
-    //         top: 27px;
-    //         transition-delay: .1s;
-    //     }
-    // }
-
     .bar__one,
     .bar__two,
     .bar__three {
@@ -135,17 +109,33 @@
     background-color: $dark;
     overflow: hidden;
 
-    &__mobile {
-        display: block;
-    }
 
     &__desktop {
         display: none;
     }
 
+    &__mobile,
+    &__courses {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 45vh;
+        background-image: url('../img/szkolenia8.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__courses{
+        align-items: flex-end;
+    }
+
 
 
     &__hero {
+
         background-image: url('../img/szkolenia2.jpg');
         background-position: center;
         background-repeat: no-repeat;
@@ -157,7 +147,13 @@
         height: 100%;
         opacity: 0.3;
         z-index: -1;
+
+        &--courses {
+            background-image: url('../img/shop.jpg');
+        }
     }
+
+
 
     &__title {
         opacity: 0;
@@ -168,9 +164,15 @@
         letter-spacing: 2px;
         font-size: 1.7rem;
         color: $pure-white;
-        margin-top: 21em;
         padding: .5em;
         animation: headerAnimation 2s 1s ease-in-out forwards;
+
+        &--courses {
+            opacity: 1;
+            color: $pure-white;
+            font-weight: normal;
+            animation: none;
+        }
 
 
     }
@@ -178,6 +180,11 @@
     &__span {
         opacity: 0;
         animation: headerAnimation 2s 2.5s ease-in-out forwards;
+
+        &--courses {
+            opacity: 1;
+            animation: none;
+        }
     }
 
     &__logo {
@@ -241,9 +248,7 @@
     }
 
     &__mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: none;
         overflow: hidden;
         position: relative;
         z-index: 999;
@@ -335,7 +340,9 @@
 
 
 .navbarActive {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 1;
 
 }
@@ -400,6 +407,30 @@
         margin-top: 2em;
     }
 
+    &__link {
+        &--mobile {
+            position: relative;
+            font-size: 1.3rem;
+            font-family: 'Boska';
+            font-weight: normal;
+            color: $pure-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-bottom: 1em;
+
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 1px;
+                width: 10%;
+                background-color: $pure-white;
+            }
+        }
+    }
+
     &__container {
         position: relative;
         width: 100%;
@@ -418,7 +449,9 @@
     }
 
     &__background {
-
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
         width: 40%;
         height: 40%;
@@ -428,7 +461,7 @@
             position: absolute;
             top: 50px;
             left: 5%;
-            background-image: url('../../../dist/img/oferta_uslugi.jpeg');
+            background-image: url('../../../dist/img/cabello1.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -652,16 +685,7 @@
     &__photo {
         width: 80vw;
         height: 50vh;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
         opacity: 0;
-
-        &--first {
-
-            background-image: url('../../../dist/img/shop.jpg');
-        }
 
         &--second {
             display: none;
@@ -683,7 +707,7 @@
         color: $dark;
         font-family: 'Boska', serif;
         font-weight: lighter;
-        text-transform: capitalize;
+        text-transform: uppercase;
         padding: .2em 0;
         cursor: pointer;
         margin-top: 1em;
@@ -1042,7 +1066,7 @@
         cursor: pointer;
     }
 
-    &__text{
+    &__text {
         font-size: .5rem;
         position: absolute;
         bottom: 0;
@@ -1050,7 +1074,7 @@
         padding: .5em;
     }
 
-    &__dev{
+    &__dev {
         color: $pure-white;
         text-decoration: none;
         cursor: pointer;

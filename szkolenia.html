@@ -1,11 +1,220 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gabriela Szymańska | Szkolenia</title>
+    <script src="https://kit.fontawesome.com/35828e693f.js" crossorigin="anonymous"></script>
+<link href="https://api.fontshare.com/v2/css?f[]=melodrama@300,400,700&f[]=nunito@200,300&display=swap"
+    rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=boska@200,300,400,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
-<body>
-    szkolenia
+
+<body class="home">
+    <button class="burger-btn">
+    <div class="burger-btn__box">
+        <div class="burger-btn__bars">
+            <div class="bar__one"></div>
+            <div class="bar__two"></div>
+            <div class="bar__three"></div>
+        </div>
+    </div>
+</button>
+
+    <!-- <header class="header header__courses">
+        <div class="header__hero header__hero--courses "></div>
+        <div class="header__logo"></div>
+        <h1 class="header__title header__title--courses">Gabriela Szymańska <br><span class="header__span">Szkolenia</span></h1>
+    </header> -->
+
+    <header class="header header__courses">
+        <div class="header__logo"></div>
+    </header>
+
+    <nav class="navbar__mobile">
+    <div class="navbar__main">
+        <ul class="navbar__list">
+
+            <li class="navbar__item"><a class="navbar__item--link" href="/#about">o mnie</a></li>
+            <li class="navbar__item"><a class="navbar__item--link" href="/#offers">oferta</a></li>
+            <li class="navbar__item"><a class="navbar__item--link" href="../szkolenia.html">szkolenia</a></li>
+            <li class="navbar__item"><a class="navbar__item--link" href="/#home">kursy online</a></li>
+            <li class="navbar__item"><a class="navbar__item--link" href="/#reviews">opinie</a></li>
+            <li class="navbar__item"><a class="navbar__item--link" href="/contact">kontakt</a></li>
+
+        </ul>
+    </div>
+    <a class="navbar__shop--icon" target="_blank" href="https://cabelloshop.pl/">sklep</a>
+
+    <div class="navbar__socials">
+        <a class="navbar__instagram" target="_blank" href="https://www.instagram.com/gabi.szymanskamakeup/"><i
+                class="fa-brands fa-instagram"></i></a>
+        <a class="navbar__facebook" target="_blank" href="https://www.facebook.com/gabrielamakeuproom"><i
+                class="fa-brands fa-square-facebook"></i></a>
+    </div>
+</nav>
+
+
+<nav class="navbar__desktop">
+    <div class="navbar__main">
+        <ul class="navbar__list">
+            <li class="navbar__item"><a class="navbar__item--link" href="/#about">o mnie</a></li>
+            <li class="navbar__item"><a class="navbar__item--link" href="/#offers">oferta</a></li>
+            <li class="navbar__item"><a class="navbar__item--link" href="../szkolenia.html">szkolenia</a></li>
+            <li class="navbar__item"><a class="navbar__item--link" href="//#home">kursy online</a></li>
+            <li class="navbar__item"><a class="navbar__item--link" href="/#reviews">opinie</a></li>
+            <li class="navbar__item"><a class="navbar__item--link" href="/#contact">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <div class="navbar__extra">
+        <div class="navbar__shop">
+            <a class="navbar__shop--icon" target="_blank" href="https://cabelloshop.pl/">sklep</a>
+        </div>
+
+        <div class="navbar__socials">
+            <a class="navbar__instagram" target="_blank" href="https://www.instagram.com/gabi.szymanskamakeup/"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a class="navbar__facebook" target="_blank" href="https://www.facebook.com/gabrielamakeuproom"><i
+                    class="fa-brands fa-square-facebook"></i></a>
+        </div>
+    </div>
+
+</nav>
+    <main>
+        <section class="lessons section">
+            <h2 class="lessons__title section__title">Dostępne Szkolenia</h2>
+            <div class="lessons__container">
+                <div class="lesson__container">
+                    <h2 class="lesson__title">Szkolenia Grupowe</h2>
+                    <div class="lesson__schedule">
+                        <ul class="lesson__list">
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">6.04</h2>
+                                <p class="lesson__city">Warszawa</p>
+                                <p class="lesson__info">Wysoki kok/niskie upięcie</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">12.04</h2>
+                                <p class="lesson__city">Katowice</p>
+                                <p class="lesson__info">Niski kuc/Niskie upięcie</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">11.05</h2>
+                                <p class="lesson__city">Ciechanów</p>
+                                <p class="lesson__info">Niski kuc/French Twist</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">18.05</h2>
+                                <p class="lesson__city">Rzeszów</p>
+                                <p class="lesson__info">NISKI KUC/NISKIE UPIĘCIE</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">8.06</h2>
+                                <p class="lesson__city">Wyszków</p>
+                                <p class="lesson__info">KUC/NISKIE UPIĘCIE</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">29.06</h2>
+                                <p class="lesson__city">Warszawa</p>
+                                <p class="lesson__info">NISKI KUC/NISKIE UPIĘCIE</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">20.07</h2>
+                                <p class="lesson__city">Białystok</p>
+                                <p class="lesson__info">KUC/NISKIE UPIĘCIE</p>
+                            </li>
+                            <li class="lesson__element">
+                                <h2 class="lesson__day">27.07</h2>
+                                <p class="lesson__city">Kraków</p>
+                                <p class="lesson__info">WYSOKI KUC/NISKIE UPIĘCIE</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <h2 class="lesson__time">CZAS SZKOLENIA 9:00-17:00</h2>
+                    <span class="lesson__span">* godzina zakończenia jest uzależniona od tempa pracy kursantów</span>
+                    <button class="lesson__btn">Zobacz więcej</button>
+                    <div class="lesson__about">
+                        <h2 class="lesson__price"> Koszt Szkolenia : 1000 zł*</h2>
+                        <span class="lesson__span">* Cena szkolenia netto, jeśli życzysz sobie fakturę proszę o wysłanie danych wraz z mailem w wiadomości potwierdzającej
+                        wpłatę zadatku. W takiej sytuacji należy doliczyć +23 % VAT-u do ceny regularnej szkolenia.</span>
+                        <p class="lesson__about--text">POKAZ + PRAKTYKA 2 FRYZUR</p>
+                    </div>
+                    <div class="lesson__timetable">
+                        <h2 class="lesson__timetable--title">Harmonogram</h2>
+                        <ul class="timetable__list">
+                            <li class="timetable__element">9:00 – 10:30 POKAZ</li>
+                            <li class="timetable__element">10:30- 13:00 PRAKTYKA</li>
+                            <li class="timetable__element">13:00 – 13:15 PRZERWA</li>
+                            <li class="timetable__element">13:15 – 14:45 POKAZ</li>
+                            <li class="timetable__element">14:45 – 17:00 PRAKTYKA</li>
+                        </ul>
+                    </div>
+                    <div class="lesson__checklist">
+                        <h2 class="checklist__title">Co Należy ze sobą zabrać</h2>
+                        <ul class="checklist__list">
+                            <li class="checklist__element">grzebień do tapiru ze szpikulcem</li>
+                            <li class="checklist__element">grzebień widelec</li>
+                            <li class="checklist__element">lokówkę 32 mm lub 25 mm prostą</li>
+                            <li class="checklist__element">prostownicę</li>
+                            <li class="checklist__element">wsuwki</li>
+                            <li class="checklist__element">kokówki min 7 cm długości</li>
+                            <li class="checklist__element">lakier suchy mocny do włosów np Silhouette, puder teksturyzujący np zielony Taft, wosk Redken lub volume up Osis nr 2</li>
+                            <li class="checklist__element">patyczki drewniane ( do szaszłyków ) lub druty metalowe ( do szycia )</li>
+                            <li class="checklist__element">modelkę ( włosy minimum do łopatek )</li>
+                            <li class="checklist__element">podkładkę termoochronną pod gorące narzędzia</li>
+                            <li class="checklist__element">klipsy fryzjerskie</li>
+                            <li class="checklist__element">klipsy fryzjerskie metalowe</li>
+                            <li class="checklist__element">gumki fryzjerskie</li>
+                            <li class="checklist__element">wypełniacz</li>
+                        </ul>
+
+                    </div>
+                    <div class="lesson__included">
+                        <h2 class="included__title">Co zapewniam</h2>
+                        <ul class="included__list">
+                            <li class="included__element">Karbownice</li>
+                            <li class="included__element">Lunch, wodę, kawę, herbatę, słodkie oraz słone przekąski</li>
+                            <li class="included__element">Jeśli nie jesteś w stanie zorganizować modelki proszę o wiadomość abyśmy mogli przygotować główkę</li>
+                        </ul>
+                    </div>
+                    <div class="lesson__shop">
+                        <h2 class="shop__title--lesson">UWAGA ! Podczas szkolenia istnieje możliwość zaopatrzenia się we wszystkie akcesoria ( dotyczy to szkoleń stacjonarnych
+                        w Warszawie, jeśli interesuje Cię zakup w innych miastach proszę o wiadomość podczas zapisu )</h2>
+                        <a href="https://cabelloshop.pl/ " target="_blank">kup akcesoria</a>
+                    </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+    <h2 class="footer__title">Gabriela Szymańska | MakeUp Room</h2>
+    <ul class="footer__list">
+        <li class="footer__element"><a href="/#home" class="footer__link">Home</a></li>
+        <li class="footer__element"><a href="../szkolenia.html" class="footer__link">Szkolenia</a></li>
+        <li class="footer__element"><a href="../szkolenia.html" class="footer__link">Szkolenia Online</a>
+        </li>
+        <li class="footer__element"><a href="https://cabelloshop.pl/" target="_blank" class="footer__link">Sklep</a>
+        </li>
+    </ul>
+    <p class="footer__text">Strona wykonana przez : <a href="https://www.instagram.com/sbwebcraft/" target="_blank"
+            class="footer__dev">SbWebCraft</a></p>
+</footer>
 </body>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="/dist/js/slick.min.js"></script>
+<script type="text/javascript" src="dist/js/main.min.js"></script>
+
 </html>
