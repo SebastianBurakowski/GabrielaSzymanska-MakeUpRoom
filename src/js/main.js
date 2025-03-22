@@ -17,6 +17,7 @@ let coursesSectionMobile;
 let coursesSectionDesktop;
 let coursesImages;
 let navMobileItems;
+let trainingBtns;
 
 
 const prepareDomElements = () => {
@@ -44,6 +45,7 @@ const prepareDomElements = () => {
     coursesSectionDesktop = document.querySelector('.courses__desktop')
     coursesImages = document.querySelectorAll('.courses__photo')
     navMobileItems = document.querySelectorAll('.navbar__item')
+    trainingBtns = document.querySelectorAll('.training__btn')
     
 
 }
@@ -52,7 +54,31 @@ const prepareDomElements = () => {
 const windowHeight = window.innerHeight;
 
 
+function toggleSectionVisibility(event) {
+    const targetId = event.target.getAttribute('data-target'); // Pobierz ID sekcji
+    const targetSection = document.getElementById(targetId); // Znajdź sekcję po ID
 
+    if (targetSection) {
+        // Sprawdzamy, czy sekcja jest już widoczna
+        if (targetSection.classList.contains('activeTraining')) {
+            // Jeśli sekcja jest widoczna, ukrywamy ją
+            targetSection.classList.remove('activeTraining');
+            // Czekamy na zakończenie animacji przed ustawieniem display: none
+            setTimeout(() => {
+                targetSection.style.display = 'none';
+            }, 500); // Po 500ms (czas trwania animacji)
+        } else {
+            // Jeśli sekcja nie jest widoczna, ustawiamy display: block
+            targetSection.style.display = 'block';
+            // Czekamy na załadowanie layoutu (opóźnienie 10ms), aby animacja mogła zadziałać
+            setTimeout(() => {
+                targetSection.classList.add('activeTraining');
+            }, 10); // Krótkie opóźnienie pozwala na zainicjowanie animacji
+        }
+    } else {
+        console.error(`Sekcja z ID '${targetId}' nie istnieje!`);
+    }
+}
 
 
 const burgerHandle = () => {
@@ -196,6 +222,7 @@ const prepareDomEvents = () => {
     window.addEventListener('scroll', handleShowShop);
     window.addEventListener('scroll', handleShowCourses);
     navMobileItems.forEach(el => el.addEventListener('click', handleCloseNav))
+    trainingBtns.forEach(button => button.addEventListener('click', toggleSectionVisibility));
  
 
 }

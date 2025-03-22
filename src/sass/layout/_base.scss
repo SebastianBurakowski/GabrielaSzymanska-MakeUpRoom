@@ -120,15 +120,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: transparent;
-        height: 45vh;
-        background-image: url('../img/szkolenia8.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-color: $dark;
+        height: 100vh;
+
     }
 
-    &__courses{
+    &__courses {
         align-items: flex-end;
     }
 
@@ -149,7 +146,12 @@
         z-index: -1;
 
         &--courses {
-            background-image: url('../img/shop.jpg');
+            background-image: url('../img/szkolenia8.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 45vh;
+            background-color: transparent;
         }
     }
 
@@ -158,7 +160,7 @@
     &__title {
         opacity: 0;
         text-align: center;
-        font-family: 'Boska', serif;
+        font-family: 'Boska';
         font-weight: lighter;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -290,8 +292,6 @@
             width: 100%;
             padding: .5em 1em;
             color: $dark;
-            font-family: 'Boska', serif;
-            font-weight: normal;
             text-transform: uppercase;
             text-decoration: none;
             cursor: pointer;
@@ -307,8 +307,6 @@
             bottom: .5em;
             left: .5em;
             font-size: 1.2rem;
-            font-family: 'Boska', serif;
-            font-weight: normal;
             color: $dark;
             text-transform: uppercase;
             padding: .5em;
@@ -354,6 +352,7 @@
 
     &__text {
         opacity: 0;
+        font-family: 'Melodrama', serif;
         font-size: 1rem;
         text-align: center;
     }
@@ -411,8 +410,6 @@
         &--mobile {
             position: relative;
             font-size: 1.3rem;
-            font-family: 'Boska';
-            font-weight: normal;
             color: $pure-white;
             text-decoration: none;
             text-transform: uppercase;
@@ -639,8 +636,7 @@
         z-index: 5;
 
 
-        font-family: 'Boska', serif;
-        font-weight: normal;
+
         color: $pure-white;
         text-align: center;
         font-size: 2.1rem;
@@ -705,8 +701,6 @@
     &__link {
         text-decoration: none;
         color: $dark;
-        font-family: 'Boska', serif;
-        font-weight: lighter;
         text-transform: uppercase;
         padding: .2em 0;
         cursor: pointer;
@@ -774,8 +768,7 @@
         text-decoration: none;
         text-transform: uppercase;
         text-align: center;
-        font-family: 'Boska', serif;
-        font-weight: normal;
+        ;
         cursor: pointer;
         margin-bottom: 1.5em;
         padding: .5em;
@@ -820,8 +813,6 @@
 
         text-align: left;
         font-size: 1rem;
-        font-family: 'Boska';
-        font-weight: normal;
         padding: 0 1em;
         margin-bottom: 1em;
     }
@@ -904,8 +895,6 @@
 
     &__header {
         color: $pure-white;
-        font-family: 'Boska';
-        font-weight: normal;
         text-transform: uppercase;
         text-align: center;
     }
@@ -960,8 +949,6 @@
 .form-group label {
 
     color: $pure-white;
-    font-family: 'Boska';
-    font-weight: normal;
     font-size: 16px;
     display: block;
     margin-bottom: 5px;
@@ -984,8 +971,6 @@
 }
 
 .btn {
-    font-family: 'Boska';
-    font-weight: normal;
     background-color: transparent;
     color: $pure-white;
     padding: 10px 20px;
@@ -1002,8 +987,6 @@
 }
 
 .right {
-    font-family: 'Boska';
-    font-weight: lighter;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1045,8 +1028,6 @@
 
     &__title {
         font-size: 1rem;
-        font-family: 'Boska';
-        font-weight: lighter;
         padding: .5em;
     }
 
@@ -1089,3 +1070,171 @@
 
 
 //kotankt
+
+
+
+.training {
+    &__section {
+
+        margin: 50px auto;
+        border-radius: 10px;
+        text-align: center;
+
+
+    }
+
+    &__container {
+        &--hide {
+            max-height: 0;
+            opacity: 0;
+            display: none;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        }
+    }
+
+    &__btn {
+        font-family: "Playfair", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-size: 1.2rem;
+        background-color: transparent;
+        border: none;
+        margin: .5em 0;
+        border-bottom: 1px solid $dark;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+        color: $dark;
+        padding: .5em 0;
+    }
+
+    &__text {
+        font-size: 1.2rem;
+    }
+
+    &__price {
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+
+    &__shop {
+        display: inline-block;
+        font-size: 1.2rem;
+        color: $dark;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: 1px solid $dark;
+        margin-top: 1em;
+        padding: .5em 1em;
+        cursor: pointer;
+    }
+}
+
+.activeTraining{
+   opacity: 1;
+    display: block;
+    max-height: 10000px;
+}
+
+.lessons {
+    &__container {
+        border-top: 1px solid $dark;
+        border-bottom: 1px solid $dark ;
+        padding: 1em 0;
+    }
+}
+
+.schedule {
+    
+
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+        color: $dark;
+        padding: .5em;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        padding: .5em 0;
+        margin-bottom: 1em;
+
+        &--time {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__date {
+        font-size: 1.5rem;
+
+    }
+
+    &__element {
+        font-size: 1.2rem;
+        margin-bottom: 1em;
+    }
+
+    &__extra {
+        font-size: 1.2rem;
+
+    }
+
+
+}
+
+.timetable {
+    &__list {
+        list-style: none;
+    }
+
+    &__element {
+        font-size: 1.2rem;
+        margin-bottom: 1em;
+
+    }
+
+    &__time {
+        font-size: 1.5rem;
+    }
+}
+
+
+.checklist {
+    &__list {
+        list-style: disc;
+    }
+
+    &__element {
+        font-size: 1.2rem;
+        margin-bottom: 1em;
+
+    }
+
+    &__time {
+        font-size: 1.5rem;
+    }
+}
+
+.included {
+    &__list {
+        list-style: disc;
+    }
+
+    &__element {
+        font-size: 1.2rem;
+        margin-bottom: 1em;
+
+    }
+
+    &__time {
+        font-size: 1.5rem;
+    }
+}
