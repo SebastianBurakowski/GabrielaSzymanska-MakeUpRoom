@@ -120,13 +120,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $dark;
-        height: 100vh;
+        background-color: $pure-white;
 
     }
 
     &__courses {
-        align-items: flex-end;
+        height: 100vh;
+        margin-top: 1em;
     }
 
 
@@ -146,15 +146,18 @@
         z-index: -1;
 
         &--courses {
-            background-image: url('../img/szkolenia8.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 45vh;
-            background-color: transparent;
+            position: relative;
+            background-image: none;
         }
     }
 
+    &__video {
+        height: 70%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
+
+    }
 
 
     &__title {
@@ -170,8 +173,12 @@
         animation: headerAnimation 2s 1s ease-in-out forwards;
 
         &--courses {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
             opacity: 1;
-            color: $pure-white;
+            color: $dark;
             font-weight: normal;
             animation: none;
         }
@@ -183,10 +190,6 @@
         opacity: 0;
         animation: headerAnimation 2s 2.5s ease-in-out forwards;
 
-        &--courses {
-            opacity: 1;
-            animation: none;
-        }
     }
 
     &__logo {
@@ -194,13 +197,15 @@
         position: absolute;
         top: 20px;
         left: 10px;
-        background-image: url(../../../dist/img/Gabriela_Szymanska_Logo_Transparent.png);
+        background-image: url(../../../dist/img/Gabriela_Szymańska_LOGO_page-0001.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 70px;
         width: 110px;
         animation: logoAnimation 3s ease-in-out forwards;
+
+
 
     }
 
@@ -1076,11 +1081,16 @@
 .training {
     &__section {
 
-        margin: 50px auto;
-        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 0;
         text-align: center;
+        padding: 0 .5em;
 
 
+    }
+
+    &__span {
+        font-weight: bold;
     }
 
     &__container {
@@ -1105,14 +1115,20 @@
     }
 
     &__title {
+
         font-size: 2rem;
         text-align: center;
         color: $dark;
-        padding: .5em 0;
+
     }
 
     &__text {
         font-size: 1.2rem;
+        padding: .5em;
+
+        &--makeup {
+            font-style: italic;
+        }
     }
 
     &__price {
@@ -1134,8 +1150,8 @@
     }
 }
 
-.activeTraining{
-   opacity: 1;
+.activeTraining {
+    opacity: 1;
     display: block;
     max-height: 10000px;
 }
@@ -1144,12 +1160,14 @@
     &__container {
         border-top: 1px solid $dark;
         border-bottom: 1px solid $dark ;
-        padding: 1em 0;
+        padding: 1em .5em;
+        background-color: #ffe5ecb2;
+        border-radius: 10px;
     }
 }
 
 .schedule {
-    
+
 
     &__title {
         font-size: 2rem;
@@ -1209,7 +1227,7 @@
 
 .checklist {
     &__list {
-        list-style: disc;
+        list-style: inside;
     }
 
     &__element {
@@ -1225,7 +1243,7 @@
 
 .included {
     &__list {
-        list-style: disc;
+        list-style: inside;
     }
 
     &__element {
@@ -1236,5 +1254,87 @@
 
     &__time {
         font-size: 1.5rem;
+    }
+}
+
+
+.premium {
+
+    &__container {
+        text-align: center;
+        overflow: hidden;
+
+    }
+
+    &__title {
+        margin: 1em 0;
+        padding-top: .5em;
+    }
+
+    &__list {
+        list-style: inside;
+        padding: .5em 0;
+
+    }
+
+    &__element {
+        font-size: 1.2rem;
+        margin-bottom: 1em;
+    }
+
+    &__gallery {
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       
+    }
+
+    &__pink{
+    
+        padding: 0 .5em;
+        border-radius: 8px;
+    }
+}
+
+
+
+
+.gallery {
+
+    &__elements {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    &__element {
+        height: 60vh;
+        width: 100vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &-1 {
+            background-image: url('../../../dist/img/szkolenia5.jpg');
+
+        }
+
+        &-2 {
+            background-image: url('../../../dist/img/oferta_uslugi.jpeg');
+        }
+
+        &-3 {
+            background-image: url('../../../dist/img/szkolenia6.jpg');
+        }
+
+        &-4 {
+            background-image: url('../../../dist/img/szkolenia7.jpg');
+        }
     }
 }
