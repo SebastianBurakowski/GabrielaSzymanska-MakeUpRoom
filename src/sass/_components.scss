@@ -16,10 +16,10 @@
 
 .section__title {
     position: relative;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
-    font-family: "Playfair", serif;
-    font-weight: 300;
+    font-family: 'Panchang', sans-serif;
+    font-weight: lighter;
     text-transform: uppercase;
     padding: .5em;
     margin-bottom: 1em;
@@ -27,7 +27,7 @@
     &::after {
         content: '';
         position: absolute;
-        bottom: 15px;
+        bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
         width: 10%;
@@ -40,12 +40,12 @@
 
 @media (min-width : 992px) {
     .section__title {
-        font-size: 3.5rem;
+        font-size: 2rem;
 
         &::after {
             content: '';
             position: absolute;
-            bottom: 25px;
+            bottom: 15px;
             left: 50%;
             transform: translateX(-50%);
             width: 5%;

@@ -124,6 +124,10 @@
 
     }
 
+    &__mobile {
+        background-color: $dark;
+    }
+
     &__courses {
         height: 100vh;
         margin-top: 1em;
@@ -163,11 +167,10 @@
     &__title {
         opacity: 0;
         text-align: center;
-        font-family: 'Boska';
-        font-weight: lighter;
         text-transform: uppercase;
+        font-weight: lighter;
         letter-spacing: 2px;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         color: $pure-white;
         padding: .5em;
         animation: headerAnimation 2s 1s ease-in-out forwards;
@@ -204,6 +207,10 @@
         height: 70px;
         width: 110px;
         animation: logoAnimation 3s ease-in-out forwards;
+
+        &--mobile {
+            background-image: url(../../../dist/img/Gabriela_Szymanska_Logo_Transparent.png);
+        }
 
 
 
@@ -266,7 +273,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 90vh;
+        height: 100vh;
 
     }
 
@@ -291,7 +298,7 @@
 
     &__item {
         &--link {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             display: inline-block;
             text-align: center;
             width: 100%;
@@ -356,10 +363,12 @@
 .about {
 
     &__text {
+        font-family: "Playfair", serif;
+        font-weight: normal;
         opacity: 0;
-        font-family: 'Melodrama', serif;
         font-size: 1rem;
         text-align: center;
+
     }
 
 
@@ -413,8 +422,9 @@
 
     &__link {
         &--mobile {
+            text-align: center;
             position: relative;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: $pure-white;
             text-decoration: none;
             text-transform: uppercase;
@@ -514,6 +524,7 @@
 
 
 .offers {
+ 
 
 
 
@@ -644,7 +655,7 @@
 
         color: $pure-white;
         text-align: center;
-        font-size: 2.1rem;
+        font-size: 1.8rem;
         text-transform: uppercase;
         padding: 0 .5em;
 
@@ -704,12 +715,14 @@
     }
 
     &__link {
+        font-size: 1rem;
         text-decoration: none;
         color: $dark;
         text-transform: uppercase;
         padding: .2em 0;
         cursor: pointer;
         margin-top: 1em;
+        margin-bottom: 3em;
         border: 1px solid $dark;
         transition: background-color 1s;
 
@@ -739,9 +752,13 @@
 //COURSES
 
 .courses {
+   
+    
 
     width: 100%;
-
+ &__mobile{
+       border-top: 1px solid $dark; 
+    }
     &__desktop {
         display: none;
     }
@@ -899,9 +916,13 @@
     overflow: hidden;
 
     &__header {
+        font-family: 'Panchang', sans-serif;
+        font-weight: lighter;
+        font-size: 1.5rem;
         color: $pure-white;
         text-transform: uppercase;
         text-align: center;
+        margin-bottom: 5em;
     }
 
     &__background {
@@ -925,6 +946,19 @@
         background: url('../../../dist/img/szkolenia1.jpg') no-repeat center center/cover;
         z-index: 0;
     }
+
+    &__btn {
+        font-family: 'Panchang', sans-serif;
+        font-weight: lighter;
+        background-color: transparent;
+        color: $pure-white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: 1px solid $pure-white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 1s;
+    }
 }
 
 
@@ -941,10 +975,6 @@
 
 }
 
-.middle h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
 
 .form-group {
 
@@ -954,7 +984,7 @@
 .form-group label {
 
     color: $pure-white;
-    font-size: 16px;
+    font-size: 1rem;
     display: block;
     margin-bottom: 5px;
 }
@@ -975,17 +1005,6 @@
     height: 100px;
 }
 
-.btn {
-    background-color: transparent;
-    color: $pure-white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 1px solid $pure-white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 1s;
-
-}
 
 .btn:hover {
     background-color: #444;
@@ -1010,13 +1029,12 @@
 
 .social-icons a {
     color: $pure-white;
-    ;
     text-decoration: none;
 }
 
 .phone {
 
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: normal;
     color: $pure-white;
     text-decoration: none;
@@ -1029,11 +1047,12 @@
     background-color: $dark;
     color: $pure-white;
     text-align: center;
-    height: 15vh;
+    height: 20vh;
 
     &__title {
-        font-size: 1rem;
-        padding: .5em;
+        font-size: .8rem;
+        font-weight: lighter;
+        padding: 1em;
     }
 
     &__list {
@@ -1041,19 +1060,18 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        margin-bottom: 2em;
     }
 
     &__link {
         text-align: center;
-        font-size: .6rem;
+        font-size: .3rem;
         color: $pure-white;
         text-decoration: none;
         cursor: pointer;
     }
 
     &__text {
-        font-size: .5rem;
+        font-size: .4rem;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -1064,7 +1082,7 @@
         color: $pure-white;
         text-decoration: none;
         cursor: pointer;
-        font-weight: bold;
+        font-weight: normal;
         padding: .5em;
     }
 
@@ -1074,7 +1092,7 @@
 
 
 
-//kotankt
+//SZKOLENIA
 
 
 
@@ -1103,10 +1121,10 @@
     }
 
     &__btn {
-        font-family: "Playfair", serif;
+        font-family: 'Panchang', sans-serif;
+        font-weight: normal;
         font-optical-sizing: auto;
-        font-weight: 600;
-        font-size: 1.2rem;
+        font-size: 1rem;
         background-color: transparent;
         border: none;
         margin: .5em 0;
@@ -1115,14 +1133,31 @@
     }
 
     &__title {
-
-        font-size: 2rem;
+        position: relative;
+        font-weight: lighter;
+        font-size: 1.5rem;
         text-align: center;
         color: $dark;
+        margin-bottom: 1em;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10%;
+            height: 1px;
+            background-color: $dark;
+
+
+        }
 
     }
 
     &__text {
+        font-family: "Playfair", serif;
+        font-weight: light;
         font-size: 1.2rem;
         padding: .5em;
 
@@ -1170,14 +1205,17 @@
 
 
     &__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
         color: $dark;
         padding: .5em;
+        font-weight: lighter;
     }
 
     &__text {
-        font-size: 1.5rem;
+        font-family: "Playfair", serif;
+        font-weight: normal;
+        font-size: 1rem;
         padding: .5em 0;
         margin-bottom: 1em;
 
@@ -1191,12 +1229,12 @@
     }
 
     &__date {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
 
     }
 
     &__element {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 1em;
     }
 
@@ -1214,6 +1252,7 @@
     }
 
     &__element {
+
         font-size: 1.2rem;
         margin-bottom: 1em;
 
@@ -1231,6 +1270,7 @@
     }
 
     &__element {
+
         font-size: 1.2rem;
         margin-bottom: 1em;
 
@@ -1247,6 +1287,7 @@
     }
 
     &__element {
+
         font-size: 1.2rem;
         margin-bottom: 1em;
 
@@ -1289,11 +1330,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-       
+
     }
 
-    &__pink{
-    
+    &__pink {
+
         padding: 0 .5em;
         border-radius: 8px;
     }

@@ -11,6 +11,7 @@
     .header {
         &__title {
             font-size: 2.3rem;
+            font-weight: lighter;
 
         }
         &__courses{
@@ -139,8 +140,7 @@
 
             text-align: right;
             margin-top: 0;
-            font-weight: normal;
-            font-size: 4.5rem;
+            font-size: 2rem;
             color: $dark;
             padding: 0;
 
@@ -158,11 +158,10 @@
         &__white {
             opacity: 0;
             text-align: left;
-            font-family: 'Boska', serif;
-            font-weight: normal;
             text-transform: uppercase;
-            font-size: 4.5rem;
+            font-size: 2rem;
             color: $pure-white;
+            font-weight: lighter;
 
         }
     }
@@ -176,8 +175,6 @@
         &__desktop {
             position: static;
             display: block;
-            font-family: 'Boska', serif;
-            font-weight: normal;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -218,7 +215,7 @@
             border-right: 1px solid $dark;
 
             &--link {
-                font-size: 1rem;
+                font-size: .6rem;
                 height: 100%;
                 transition: transform 1s;
 
@@ -240,6 +237,7 @@
         }
 
         &__shop {
+           
             width: 50%;
             border-right: 1px solid $dark;
 
@@ -294,7 +292,7 @@
         &__text {
             text-align: center;
             width: 40%;
-            font-size: 1rem;
+            font-size: 1.2rem;
 
             &::after {
                 content: '';
@@ -311,7 +309,8 @@
     }
 
     .hero {
-        height: 50vh;
+        height: 60vh;
+        box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
 
         &__mobile {
             display: none;
@@ -329,25 +328,22 @@
         }
 
         &__link {
+            font-size: 1rem;
             position: relative;
             opacity: 1;
             color: $pure-white;
             text-decoration: none;
             text-transform: uppercase;
-            font-family: 'Boska', serif;
-            font-weight: normal;
             margin-bottom: 1em;
+            padding: .5em 1em;
+            border: 1px solid $pure-white;
+            transition: background-color 1s;
 
-            &::after {
-                position: absolute;
-                content: '';
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                height: 1px;
-                width: 10%;
-                background-color: $pure-white;
+            &:hover{
+                background-color: $dark;
             }
+
+         
         }
 
         &__desktop {
@@ -369,7 +365,7 @@
                 align-items: flex-end;
                 width: 100%;
                 height: 100%;
-                background-image: url('../../../dist/img/hero__shop__new.png');
+                background-image: url('../../../dist/img/hero__shop__new2.png');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -388,11 +384,11 @@
         &::before {
             content: '';
             position: absolute;
-            top: 65%;
+            top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 1px;
-            height: 78%;
+            height: 89%;
             background-color: $dark;
         }
 
@@ -481,7 +477,7 @@
         &::after {
             content: "";
             position: absolute;
-            height: 30%;
+            height: 40%;
             width: 1px;
             background-color: $dark;
             top: 50%;
@@ -490,7 +486,7 @@
         }
 
         &__title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             position: absolute;
             top: 10%;
             left: 50%;
@@ -539,7 +535,7 @@
             bottom: 3em;
             border: none;
             font-weight: normal;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             border-bottom: 1px solid $dark;
 
             &:hover {
@@ -563,16 +559,17 @@
         &__link {
             &--desktop {
 
-                top: 80%;
+                top: 90%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 30%;
                 cursor: pointer;
+                font-size: 1.5rem;
 
                 &::after {
                     position: absolute;
                     content: '';
-                    bottom: 0;
+                    bottom: 25%;
                     left: 50%;
                     transform: translateX(-50%);
                     height: 1px;
@@ -629,13 +626,14 @@
     .review {
 
         &__header {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: lighter;
 
         }
 
         &__text {
             width: 50%;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
     }
 
@@ -646,9 +644,15 @@
 
         }
 
-        &__header {
-            font-size: 3.5rem;
-        }
+                  &__header {
+                      font-family: 'Panchang', sans-serif;
+                      font-weight: lighter;
+                      font-size: 1.5rem;
+                      color: $pure-white;
+                      text-transform: uppercase;
+                      text-align: center;
+                      margin-bottom: 5em;
+                  }
 
 
     }
@@ -677,25 +681,22 @@
 
     }
 
-    .middle h2 {
-        font-size: 3rem;
-    }
 
     .phone {
 
-        font-size: 2rem;
+        font-size: 1rem;
 
     }
 
     .footer {
-        height: 10vh;
+        height: 13vh;
 
         &__title {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         &__link {
-            font-size: .8rem;
+            font-size: .7rem;
         }
     }
 

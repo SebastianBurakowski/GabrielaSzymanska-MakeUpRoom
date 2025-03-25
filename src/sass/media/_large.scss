@@ -10,14 +10,17 @@
 
         &__title,
         &__white {
-            font-size: 5rem;
+            font-size: 3rem;
         }
 
     }
 
     .navbar {
         &__item {
-            font-size: 1.2rem;
+            &--link {
+                font-size: 1rem;
+            }
+
         }
 
         &__shop {
@@ -67,6 +70,12 @@
         }
     }
 
+    .hero{
+        &__link{
+            font-size: 1.2rem;
+        }
+    }
+
     .courses {
         &__photo {
 
@@ -86,6 +95,7 @@
 
     .review {
         margin-top: 6em;
+
         &__slick {
             &--right {
                 width: 60px;
