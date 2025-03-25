@@ -18,7 +18,7 @@
     .navbar {
         &__item {
             &--link {
-                font-size: 1rem;
+                font-size: .9rem;
             }
 
         }
@@ -33,7 +33,7 @@
 
     .about {
         &__text {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
         }
     }
 
@@ -41,9 +41,9 @@
     .offers {
         &::before {
 
-            top: 63%;
+            top: 58%;
 
-            height: 81%;
+            height: 90%;
 
         }
 

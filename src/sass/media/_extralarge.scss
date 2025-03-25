@@ -21,9 +21,9 @@
     .offers {
         &::before {
 
-            top: 61%;
+            top: 57%;
 
-            height: 82%;
+            height: 90%;
 
         }
 
@@ -82,9 +82,10 @@
     .courses {
         margin-top: 3em;
 
-        &__link{
+        &__link {
             font-size: 2rem;
         }
+
         &__photo {
 
             width: 15vw;
@@ -94,10 +95,11 @@
                 top: -10%;
             }
 
-            &--first{
+            &--first {
                 left: 10%;
                 bottom: -15%;
             }
+
             &--third {
                 right: 10%;
                 bottom: -15%;
@@ -105,9 +107,127 @@
         }
     }
 
-    .contact{
-        &__container{
+    .contact {
+        &__container {
             background-attachment: fixed;
+        }
+    }
+
+    .training {
+
+        &__header{
+            height: 80vh;
+        }
+        &__price {
+            font-size: 2rem;
+        }
+
+        &__title {
+            margin-top: 1em;
+        }
+
+        &__btn{
+            font-size: .9rem;
+           
+        }
+
+
+
+    }
+
+    .schedule {
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__text{
+            font-size: 1.1rem;
+        }
+
+
+
+
+
+        &__date {
+
+            font-size: 1.2rem;
+
+        }
+
+        &__element {
+
+            margin-bottom: 1.2em;
+        }
+
+        &__extra {
+            font-size: 1.3rem;
+
+        }
+
+
+    }
+
+
+    .timetable {
+
+
+        &__element {
+
+            font-size: 1.2rem;
+
+
+        }
+
+        &__time {
+            font-size: 1.2rem;
+        }
+    }
+
+
+    .checklist {
+
+
+        &__element {
+
+            font-size: 1.2rem;
+
+
+        }
+
+        &__time {
+            font-size: 1.6rem;
+        }
+    }
+
+    .included {
+
+
+        &__element {
+
+            font-size: 1.2rem;
+
+
+        }
+
+        &__time {
+            font-size: 1.6rem;
+        }
+    }
+
+    .contact {
+
+        &__header {
+
+            font-size: 2rem;
+
+        }
+
+    }
+
+
+    .premium {
+        &__title {
+            font-size: 2.5rem;
         }
     }
 }

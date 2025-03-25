@@ -156,7 +156,6 @@
     }
 
     &__video {
-        height: 70%;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
@@ -524,7 +523,7 @@
 
 
 .offers {
- 
+
 
 
 
@@ -752,13 +751,15 @@
 //COURSES
 
 .courses {
-   
-    
+
+
 
     width: 100%;
- &__mobile{
-       border-top: 1px solid $dark; 
+
+    &__mobile {
+        border-top: 1px solid $dark;
     }
+
     &__desktop {
         display: none;
     }
@@ -1102,8 +1103,43 @@
         margin: 0 auto;
         margin-top: 0;
         text-align: center;
-        padding: 0 .5em;
+        padding: 1em 0;
+        
 
+
+    }
+
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../../dist/img/hero.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: .4;
+    }
+
+    &__img {
+        opacity: 0;
+        text-align: center;
+        height: 45vh;
+        padding: 0 1em;
+        margin-top: 1em;
+        margin: 0 auto;
+        animation: titleAnimation 1s 1s ease-in-out forwards;
+    }
+
+    &__header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30vh;
+        background-color: $dark;
 
     }
 
@@ -1121,10 +1157,12 @@
     }
 
     &__btn {
+        position: static;
+        color: $dark;
         font-family: 'Panchang', sans-serif;
         font-weight: normal;
         font-optical-sizing: auto;
-        font-size: 1rem;
+        font-size: .8rem;
         background-color: transparent;
         border: none;
         margin: .5em 0;
@@ -1133,24 +1171,23 @@
     }
 
     &__title {
+        opacity: 0;
         position: relative;
         font-weight: lighter;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         text-align: center;
-        color: $dark;
-        margin-bottom: 1em;
+        color: $pure-white;
+        animation: titleAnimation 1s ease-in-out forwards;
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 10%;
-            height: 1px;
-            background-color: $dark;
+    }
 
+    @keyframes titleAnimation {
+        0% {
+            opacity: 0;
+        }
 
+        100% {
+            opacity: 1;
         }
 
     }
@@ -1195,9 +1232,8 @@
     &__container {
         border-top: 1px solid $dark;
         border-bottom: 1px solid $dark ;
-        padding: 1em .5em;
-        background-color: #ffe5ecb2;
-        border-radius: 10px;
+        padding: 1em 0;
+         background: radial-gradient(circle, rgba(250, 225, 221, 1) 0%, rgba(248, 237, 235, 1) 100%);
     }
 }
 
@@ -1205,7 +1241,7 @@
 
 
     &__title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         text-align: center;
         color: $dark;
         padding: .5em;
@@ -1229,12 +1265,13 @@
     }
 
     &__date {
-        font-size: 1.2rem;
+        width: 100%;
+        font-size: 1rem;
 
     }
 
     &__element {
-        font-size: 1rem;
+        font-size: .8rem;
         margin-bottom: 1em;
     }
 
@@ -1253,13 +1290,13 @@
 
     &__element {
 
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 1em;
 
     }
 
     &__time {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 
@@ -1271,7 +1308,7 @@
 
     &__element {
 
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 1em;
 
     }
@@ -1288,7 +1325,7 @@
 
     &__element {
 
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 1em;
 
     }
@@ -1308,6 +1345,7 @@
     }
 
     &__title {
+        font-size: 1.2rem;
         margin: 1em 0;
         padding-top: .5em;
     }
@@ -1319,7 +1357,7 @@
     }
 
     &__element {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 1em;
     }
 
