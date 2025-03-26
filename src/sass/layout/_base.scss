@@ -362,10 +362,10 @@
 .about {
 
     &__text {
-        font-family: "Playfair", serif;
-        font-weight: normal;
+        // font-family: "Playfair", serif;
+        // font-weight: normal;
         opacity: 0;
-        font-size: 1rem;
+        font-size: .5rem;
         text-align: center;
 
     }
@@ -916,6 +916,10 @@
 .contact {
     overflow: hidden;
 
+    &__title {
+        margin-top: 1em;
+    }
+
     &__header {
         font-family: 'Panchang', sans-serif;
         font-weight: lighter;
@@ -1104,12 +1108,58 @@
         margin-top: 0;
         text-align: center;
         padding: 1em 0;
-        
+
 
 
     }
 
-    &__background{
+    &__info {
+        padding: 0 .5em;
+    }
+
+    &__group {
+        width: 45vw;
+        height: 50vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 1em;
+        box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
+
+        &--first {
+            background-image: url('../../../dist/img/grupowe1.jpg');
+        }
+
+        &--second {
+            background-image: url('../../../dist/img/grupowe2.jpg');
+        }
+
+        &--third {
+            background-image: url('../../../dist/img/indywidualne1.jpg');
+        }
+
+        &--fourth {
+            background-image: url('../../../dist/img/indywidualne2.jpg');
+        }
+
+        &--fifth {
+            background-image: url('../../../dist/img/salonowe1.jpg');
+        }
+
+        &--sixth {
+            background-image: url('../../../dist/img/salonowe2.jpg');
+        }
+
+        &--seventh {
+            background-image: url('../../../dist/img/train1.jpeg');
+        }
+
+        &--eighth {
+            background-image: url('../../../dist/img/train2.jpeg');
+        }
+    }
+
+    &__background {
         position: absolute;
         top: 0;
         left: 0;
@@ -1120,6 +1170,15 @@
         background-size: cover;
         background-repeat: no-repeat;
         opacity: .4;
+
+        &--premium {
+            background-image: url('../../../dist/img/oferta_pakiet.jpg');
+        }
+
+        &--local {
+            background-image: url('../../../dist/img/szkolenia4.jpg');
+            background-position: bottom;
+        }
     }
 
     &__img {
@@ -1141,6 +1200,15 @@
         height: 30vh;
         background-color: $dark;
 
+        &--premium {
+            background-color: transparent;
+        }
+
+        &--local {
+            background-color: $pure-white;
+            color: $dark;
+        }
+
     }
 
     &__span {
@@ -1153,6 +1221,14 @@
             opacity: 0;
             display: none;
             transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        &--photo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 100%;
         }
     }
 
@@ -1174,10 +1250,17 @@
         opacity: 0;
         position: relative;
         font-weight: lighter;
+        text-transform: uppercase;
         font-size: 1.3rem;
         text-align: center;
         color: $pure-white;
-        animation: titleAnimation 1s ease-in-out forwards;
+        animation: titleAnimation 2s ease-in-out forwards;
+
+        &--local,
+        &--premium {
+            margin-top: 4em;
+            margin-bottom: 1em;
+        }
 
     }
 
@@ -1201,17 +1284,29 @@
         &--makeup {
             font-style: italic;
         }
+
+        &--italic {
+            font-family: "Playfair", serif;
+            font-style: italic;
+            font-size: 1rem;
+
+        }
+
+        &--premium {
+            margin-top: 1em;
+            color: $pure-white;
+        }
     }
 
     &__price {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: bold;
         margin-bottom: 1em;
     }
 
     &__shop {
         display: inline-block;
-        font-size: 1.2rem;
+        font-size: .9rem;
         color: $dark;
         text-decoration: none;
         text-transform: uppercase;
@@ -1232,8 +1327,8 @@
     &__container {
         border-top: 1px solid $dark;
         border-bottom: 1px solid $dark ;
-        padding: 1em 0;
-         background: radial-gradient(circle, rgba(250, 225, 221, 1) 0%, rgba(248, 237, 235, 1) 100%);
+        padding: 1em .5em;
+        background: radial-gradient(circle, rgba(250, 225, 221, 1) 0%, rgba(248, 237, 235, 1) 100%);
     }
 }
 
@@ -1241,23 +1336,24 @@
 
 
     &__title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         text-align: center;
         color: $dark;
         padding: .5em;
         font-weight: lighter;
+        margin-bottom: 1em;
+
+        &--premium {
+            color: $pure-white
+        }
     }
 
     &__text {
         font-family: "Playfair", serif;
         font-weight: normal;
         font-size: 1rem;
-        padding: .5em 0;
+        padding: .5em;
         margin-bottom: 1em;
-
-        &--time {
-            font-size: 1.2rem;
-        }
     }
 
     &__list {
@@ -1276,7 +1372,7 @@
     }
 
     &__extra {
-        font-size: 1.2rem;
+        font-size: .9rem;
 
     }
 
@@ -1337,17 +1433,96 @@
 
 
 .premium {
+    &__section {
+        position: relative;
+        border-top: 3px solid $dark;
+        border-bottom: 3px solid $dark;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+
+        &--list {
+            width: 100%;
+        }
+
+        &--photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 .5em;
+            width: 100%;
+        }
+    }
+
+    &__background {
+        width: 70vw;
+        height: 70vh;
+        background-image: url('../../../dist/img/indywidualne1.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 5px 5px 10px rgba($color: #ffffff2e, $alpha: 0.2);
+
+
+        &--local {
+            background-image: url('../../../dist/img/indywidualne2.jpg');
+
+        }
+    }
+
+
+
+
 
     &__container {
+
         text-align: center;
         overflow: hidden;
+        margin-bottom: 0;
+
+        &--main {
+            z-index: 100;
+            position: relative;
+            background-color: $dark;
+
+
+        }
+
+        &--background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../../../dist/img/szkolenia7.jpg');
+            background-size: cover;
+            background-position: 55% 50%;
+            background-repeat: no-repeat;
+            opacity: .3;
+            z-index: -1;
+
+
+
+        }
+
+        &--local {
+            background-position: 40%;
+            background-image: url('../../../dist/img/salonowe1.jpg');
+        }
+
+
 
     }
 
     &__title {
+        color: $pure-white;
         font-size: 1.2rem;
         margin: 1em 0;
-        padding-top: .5em;
+        padding: .5em;
     }
 
     &__list {
@@ -1357,6 +1532,7 @@
     }
 
     &__element {
+        color: $pure-white;
         font-size: 1rem;
         margin-bottom: 1em;
     }
@@ -1368,6 +1544,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        border-top: 3px solid $dark;
+        border-bottom: 3px solid $dark;
 
     }
 
@@ -1415,5 +1593,21 @@
         &-4 {
             background-image: url('../../../dist/img/szkolenia7.jpg');
         }
+    }
+}
+
+.border {
+    &__title{
+        color: $dark;
+        margin-bottom: 2em;
+        margin-top: 4em;
+    }
+    &__container{
+        background-color: $pure-white;
+    }
+
+    &__text{
+        text-align: center;
+        
     }
 }

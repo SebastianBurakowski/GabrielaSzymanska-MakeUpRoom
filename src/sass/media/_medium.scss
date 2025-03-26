@@ -702,12 +702,14 @@
     }
 
     .training {
-        &__background{
+        &__background {
             background-attachment: fixed;
         }
-        &__header{
+
+        &__header {
             height: 50vh;
         }
+
         &__title {
             font-size: 3rem;
         }
@@ -716,7 +718,13 @@
             font-size: 1rem;
         }
 
-       
+
+    }
+
+    .lessons {
+        &__container {
+            margin-bottom: 1em;
+        }
     }
 
     .schedule {
@@ -727,7 +735,9 @@
             align-items: center;
             width: 100%;
 
-            &::after{
+
+
+            &::after {
                 content: '';
                 position: absolute;
                 top: 50%;
@@ -738,6 +748,15 @@
                 background-color: $dark;
             }
 
+            &--premium {
+                display: block;
+
+                &::after {
+                    display: none;
+
+                }
+            }
+
         }
 
 
@@ -746,14 +765,22 @@
             text-align: center;
             width: 30%;
             font-size: 1.5rem;
+
+            &--box {
+                width: 100%;
+            }
+
+            &--premium {
+                width: 100%;
+            }
         }
 
-        &__text{
+        &__text {
             padding: 0 .5em;
-            
+
         }
 
-        &__info{
+        &__info {
             width: 60%;
         }
     }
@@ -772,8 +799,57 @@
 
 
     .premium {
+        color: $pure-white;
+
+        &__container {
+            &--background {
+                background-attachment: fixed;
+                background-position: 10% 30%;
+            }
+        }
+
         &__element {
-            font-size: 1.5rem;
+            font-size: 1rem;
+            padding: 0 2em;
+        }
+
+        &__title {
+            width: 100%;
+        }
+
+        &__background {
+            position: relative;
+            width: 30vw;
+            height: 90vh;
+
+            &::after {
+                position: absolute;
+                content: '';
+                left: -100px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 70%;
+                background-color: $pure-white;
+            }
+        }
+
+        &__box {
+            flex-direction: row;
+
+            &--list {
+                width: 50%;
+            }
+
+            &--photo {
+                width: 50%;
+            }
+        }
+    }
+
+    .border{
+        &__container{
+            height: 80vh;
         }
     }
 

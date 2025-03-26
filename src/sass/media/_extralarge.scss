@@ -1,5 +1,5 @@
 // >1200px
-
+@use '../variables' as *;
 
 @media (min-width: 1400px) {
     .about {
@@ -120,6 +120,9 @@
         }
         &__price {
             font-size: 2rem;
+            &--makeup{
+                font-size: 2.5rem;
+            }
         }
 
         &__title {
@@ -160,7 +163,7 @@
         }
 
         &__extra {
-            font-size: 1.3rem;
+            font-size: 1rem;
 
         }
 
@@ -227,8 +230,12 @@
 
     .premium {
         &__title {
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
+
+        
+
+        
     }
 }
 
