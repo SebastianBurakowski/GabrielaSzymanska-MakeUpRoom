@@ -18,6 +18,7 @@ let coursesSectionDesktop;
 let coursesImages;
 let navMobileItems;
 let trainingBtns;
+let contactForm;
 
 
 const prepareDomElements = () => {
@@ -46,6 +47,7 @@ const prepareDomElements = () => {
     coursesImages = document.querySelectorAll('.courses__photo')
     navMobileItems = document.querySelectorAll('.navbar__item')
     trainingBtns = document.querySelectorAll('.training__btn')
+    contactForm = document.getElementById("contact-form");
     
 
 }
@@ -204,8 +206,31 @@ const navHandle = () => {
 
 }
 
-// Nasłuchiwanie scrolla
+// email
+emailjs.init("i9Yh5tm3sPPf_gO8l");
 
+function sendEmail(event) {
+    event.preventDefault(); // Zatrzymuje domyślną akcję wysyłania formularza
+
+    // Pobranie danych z formularza
+    const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    // Wysyłka formularza przez EmailJS
+    emailjs.send("service_crfrei8", "template_z1pqleg", formData)
+        .then(function (response) {
+            alert("Wiadomość została wysłana!");
+            console.log("SUCCESS:", response);
+            contactForm.reset(); // Wyczyść formularz po wysłaniu
+        })
+        .catch(function (error) {
+            alert("Błąd! Nie udało się wysłać wiadomości.");
+            console.log("FAILED:", error);
+        });
+}
 
 
 
@@ -222,6 +247,7 @@ const prepareDomEvents = () => {
     window.addEventListener("scroll", navHandle);
     navMobileItems.forEach(el => el.addEventListener("click", handleCloseNav));
     trainingBtns.forEach(button => button.addEventListener("click", toggleSectionVisibility));
+    contactForm.addEventListener("submit", sendEmail);
 
     if (isHome) {
         window.addEventListener("scroll", handleShowAbout);

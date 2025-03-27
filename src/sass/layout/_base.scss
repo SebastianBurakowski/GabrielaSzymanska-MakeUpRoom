@@ -993,6 +993,23 @@
     margin-bottom: 5px;
 }
 
+.form-text {
+    color: $pure-white;
+    font-size: 1rem;
+
+}
+
+.form-link {
+    display: inline-block;
+    color: $pure-white;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1em;
+
+}
+
 .form-group input,
 .form-group textarea {
 
@@ -1292,6 +1309,12 @@
             font-style: italic;
             font-size: 1rem;
 
+        }
+
+        &--italic2 {
+            color: $dark;
+            font-style: italic;
+            font-size: 1rem;
         }
 
         &--premium {
@@ -1657,26 +1680,26 @@
         &--mobile {
             display: block;
             padding-bottom: .5em;
-        
+
         }
     }
 }
 
-.privacy{
+.privacy {
     text-align: center;
     padding: .5em 1em;
 
-    &__list{
+    &__list {
         list-style: none;
         margin-bottom: 1em;
     }
 
-    &__element{
+    &__element {
         font-size: 1.2rem;
         padding: .5em 0;
     }
 
-    &__title{
+    &__title {
         font-weight: normal;
         font-size: 2rem;
         margin-bottom: 1em;

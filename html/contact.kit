@@ -4,29 +4,33 @@
         <div class="contact__background background__hero"></div>
         <div class="middle">
             <h2 class="contact__header">Zostaw wiadomość</h2>
-            <form>
+            <form id="contact-form"> 
                 <div class="form-group">
-                    <label>Imię:</label>
-                    <input type="text" required>
+                    <label for="name">Imię:</label>
+                    <input type="text" id="name"  name="user_name" required>
                 </div>
                 <div class="form-group">
-                    <label>Adres E-mail:</label>
-                    <input type="email" required>
+                    <label for="email">Adres E-mail:</label>
+                    <input type="email" id="email" required>
                 </div>
                 <div class="form-group">
-                    <label>Wiadomość:</label>
-                    <textarea required></textarea>
+                    <label for="message">Wiadomość:</label>
+                    <textarea id="message" required></textarea>
                 </div>
+                <label>
+                    <input class="form-group" type="checkbox" required>
+                    <p class="form-text"> Akceptuję <a class="form-link" href="/polityka-prywatnosci">politykę
+                            prywatności</a>.</p>
+                </label>
                 <button class="contact__btn" type="submit">Wyślij</button>
             </form>
         </div>
         <div class="right">
             <div class="social-icons">
                 <a href="https://www.instagram.com/gabi.szymanskamakeup/" target="_blank"><i
-                        class="fa-brands fa-instagram"></i></a>
+                        class="fa-brands fa-instagram social-link"></i></a>
                 <a href="https://www.facebook.com/gabrielamakeuproom" target="_blank"><i
-                        class="fa-brands fa-facebook"></i></a>
-
+                        class="fa-brands fa-facebook social-link"></i></a>
             </div>
             <a href="tel:506553952" class="phone">506-553-952</a>
         </div>
