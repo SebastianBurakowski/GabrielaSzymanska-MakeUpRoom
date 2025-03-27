@@ -10,7 +10,7 @@
 
         &__title,
         &__white {
-            font-size: 3rem;
+            font-size: 4rem;
         }
 
     }
@@ -18,7 +18,7 @@
     .navbar {
         &__item {
             &--link {
-                font-size: .9rem;
+                font-size: 1.1rem;
             }
 
         }
@@ -33,7 +33,7 @@
 
     .about {
         &__text {
-            font-size: 1.1rem;
+            font-size: 1.4rem;
 
         }
     }
@@ -73,7 +73,7 @@
 
     .hero {
         &__link {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
     }
 
@@ -91,6 +91,18 @@
             &--third {
                 bottom: -15%;
             }
+        }
+
+        &__link {
+            &--desktop {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .shop {
+        &__link {
+            font-size: 2rem;
         }
     }
 
@@ -271,13 +283,58 @@
 
     .premium {
         &__element {
-            font-size: 1.2rem;
+            font-size: 1rem;
+            &--local {
+                    font-size: 1.2rem;
+                }
+                &--info{
+                    font-size: 1.2rem;
+                }
         }
 
         &__title {
             font-size: 1.5rem;
+            &--desktop{
+                font-size: 1.3rem;
+            }
         }
 
-     
+        &__list {
+            &--desktop {
+                width: 60%;
+            }
+
+          
+        }
+
+
+    }
+
+    .footer {
+        &__text {
+            font-size: .7rem;
+        }
+    }
+
+    .phone {
+        font-size: 2rem;
+    }
+
+
+    .local {
+        &__container {
+            &--desktop {
+
+
+                &::after {
+
+                    left: 45%;
+                        height: 50%;
+
+                }
+            }
+
+
+        }
     }
 }

@@ -216,7 +216,7 @@
             border-right: 1px solid $dark;
 
             &--link {
-                font-size: .6rem;
+                font-size: 1.1rem;
                 height: 100%;
                 transition: transform 1s;
 
@@ -570,7 +570,7 @@
                 &::after {
                     position: absolute;
                     content: '';
-                    bottom: 25%;
+                    bottom: 35%;
                     left: 50%;
                     transform: translateX(-50%);
                     height: 1px;
@@ -646,8 +646,6 @@
         }
 
         &__header {
-            font-family: 'Panchang', sans-serif;
-            font-weight: lighter;
             font-size: 1.5rem;
             color: $pure-white;
             text-transform: uppercase;
@@ -685,7 +683,7 @@
 
     .phone {
 
-        font-size: 1rem;
+        font-size: 1.3rem;
 
     }
 
@@ -715,7 +713,20 @@
         }
 
         &__text {
-            font-size: 1rem;
+            font-size: 1.1rem;
+        }
+
+        &__shop {
+            font-size: 1.4rem;
+        }
+
+        &__container{
+            &--info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
         }
 
 
@@ -750,6 +761,7 @@
 
             &--premium {
                 display: block;
+                width: 70%;
 
                 &::after {
                     display: none;
@@ -760,8 +772,18 @@
         }
 
 
+        &__element,
+        &__date {
+            font-size: 1.2rem;
+        }
+
+        &__extra {
+            font-size: .8rem;
+        }
+
 
         &__title {
+
             text-align: center;
             width: 30%;
             font-size: 1.5rem;
@@ -771,7 +793,8 @@
             }
 
             &--premium {
-                width: 100%;
+                width: 50%;
+                font-size: 2rem;
             }
         }
 
@@ -801,6 +824,31 @@
     .premium {
         color: $pure-white;
 
+        &__box{
+            &--price{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+
+        &__list {
+            &--desktop {
+                width: 50%;
+            }
+        }
+
+        &__section {
+            &--mobile {
+                display: none;
+            }
+
+            &--desktop {
+                display: block;
+            }
+        }
+
         &__container {
             &--background {
                 background-attachment: fixed;
@@ -809,12 +857,27 @@
         }
 
         &__element {
-            font-size: 1rem;
+            font-size: .9rem;
             padding: 0 2em;
+
+            &--local {
+                font-size: 1rem;
+            }
+
+            &--info{
+                font-size: .7rem;
+            }
         }
 
         &__title {
             width: 100%;
+
+            &--desktop {
+                font-size: 1.5rem;
+                width: 50%;
+               
+
+            }
         }
 
         &__background {
@@ -847,12 +910,81 @@
         }
     }
 
-    .border{
-        &__container{
+    .border {
+        &__container {
             height: 80vh;
         }
     }
 
+    .local {
+        &__container {
+            &--desktop {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::after{
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 1px;
+                    height: 20%;
+                    background-color: $pure-white;
+                }
+            }
+
+
+        }
+    }
+
+    .timetable {
+
+
+        &__element {
+
+            font-size: 1.2rem;
+
+        }
+
+        &__time {
+            font-size: 1.2rem;
+        }
+    }
+
+
+    .checklist {
+
+
+        &__element {
+            font-size: 1.2rem;
+            margin-bottom: .5em;
+
+        }
+
+        &__time {
+            font-size: 1.7rem;
+        }
+    }
+
+    .included {
+        &__list {
+            list-style: inside;
+        }
+
+        &__element {
+
+            font-size: 1.2rem;
+            margin-bottom: .5em;
+
+        }
+
+        &__time {
+            font-size: 1.7rem;
+        }
+    }
 }
 
 

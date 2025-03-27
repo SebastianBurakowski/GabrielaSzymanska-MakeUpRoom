@@ -81,24 +81,7 @@ function toggleSectionVisibility(event) {
 }
 
 
-const burgerHandle = () => {
 
-    burgerBtn.classList.toggle('burger-active')
-    burgerBars.classList.toggle('black-bars-color')
-    mobileNav.classList.toggle('navbarActive');
-}
-
-const navHandle = () => {
-
-    const headerSectioTop = headerSection.getBoundingClientRect().top
-
-    if (headerSectioTop <= windowHeight * 0.6) {
-        navDesktop.style.position = "sticky";
-        navDesktop.style.top = "0"
-        navDesktop.style.zIndex = "10000"
-    }
-
-}
 
 
 const handleShowAbout = () => {
@@ -194,15 +177,32 @@ const handleShowCourses = () => {
     }
 }
 
+
+
  const handleCloseNav = () => {
-
-
-
     mobileNav.classList.remove('navbarActive')
      burgerBtn.classList.remove('burger-active')
-     burgerBars.classList.remove('black-bars-color')
-    
+     burgerBars.classList.remove('black-bars-color')   
  }
+
+const burgerHandle = () => {
+
+    burgerBtn.classList.toggle('burger-active')
+    burgerBars.classList.toggle('black-bars-color')
+    mobileNav.classList.toggle('navbarActive');
+}
+
+const navHandle = () => {
+
+    const headerSectioTop = headerSection.getBoundingClientRect().top
+
+    if (headerSectioTop <= windowHeight * 0.6) {
+        navDesktop.style.position = "sticky";
+        navDesktop.style.top = "0"
+        navDesktop.style.zIndex = "10000"
+    }
+
+}
 
 // Nasłuchiwanie scrolla
 
@@ -214,15 +214,24 @@ const prepareDomEvents = () => {
 
     ////////// WYWOŁANIE FUNKCJI ///////////////////
 
-    burgerBtn.addEventListener("click", burgerHandle)
-    window.addEventListener("scroll", navHandle)
-    window.addEventListener("scroll", handleShowAbout)
-    window.addEventListener('scroll', heroHandle)
-    window.addEventListener('scroll', handleShowOffer);
-    window.addEventListener('scroll', handleShowShop);
-    window.addEventListener('scroll', handleShowCourses);
-    navMobileItems.forEach(el => el.addEventListener('click', handleCloseNav))
-    trainingBtns.forEach(button => button.addEventListener('click', toggleSectionVisibility));
+    const body = document.body;
+    const isHome = body.id === "home";
+
+    
+    burgerBtn.addEventListener("click", burgerHandle);
+    window.addEventListener("scroll", navHandle);
+    navMobileItems.forEach(el => el.addEventListener("click", handleCloseNav));
+    trainingBtns.forEach(button => button.addEventListener("click", toggleSectionVisibility));
+
+    if (isHome) {
+        window.addEventListener("scroll", handleShowAbout);
+        window.addEventListener("scroll", heroHandle);
+        window.addEventListener("scroll", handleShowOffer);
+        window.addEventListener("scroll", handleShowShop);
+        window.addEventListener("scroll", handleShowCourses);
+
+    }
+
  
 
 }
@@ -230,9 +239,13 @@ const prepareDomEvents = () => {
 ///// GŁOWNE WYWOŁANIE FUNKCJI /////
 
 const main = () => {
-    prepareDomElements()
-    prepareDomEvents();
+  
 
+    prepareDomElements();
+    prepareDomEvents();
 }
+
+
+
 
 window.addEventListener('DOMContentLoaded', main)

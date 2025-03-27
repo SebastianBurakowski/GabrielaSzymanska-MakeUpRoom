@@ -83,7 +83,8 @@
         margin-top: 3em;
 
         &__link {
-            font-size: 2rem;
+            font-size: 2.3rem;
+            
         }
 
         &__photo {
@@ -231,9 +232,14 @@
     .premium {
         &__title {
             font-size: 2rem;
+            &--desktop{
+                font-size: 1.8rem;
+            }
         }
 
-        
+        &__element{
+            font-size: 1.2rem;
+        }
 
         
     }

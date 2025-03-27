@@ -297,7 +297,7 @@
 
     &__item {
         &--link {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             display: inline-block;
             text-align: center;
             width: 100%;
@@ -362,10 +362,10 @@
 .about {
 
     &__text {
-        // font-family: "Playfair", serif;
-        // font-weight: normal;
+
         opacity: 0;
-        font-size: .5rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
         text-align: center;
 
     }
@@ -423,7 +423,7 @@
         &--mobile {
             text-align: center;
             position: relative;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: $pure-white;
             text-decoration: none;
             text-transform: uppercase;
@@ -714,7 +714,7 @@
     }
 
     &__link {
-        font-size: 1rem;
+        font-size: 1.3rem;
         text-decoration: none;
         color: $dark;
         text-transform: uppercase;
@@ -833,7 +833,7 @@
     }
 
     &__header {
-
+        font-weight: normal;
         text-align: left;
         font-size: 1rem;
         padding: 0 1em;
@@ -921,8 +921,7 @@
     }
 
     &__header {
-        font-family: 'Panchang', sans-serif;
-        font-weight: lighter;
+        font-weight: normal;
         font-size: 1.5rem;
         color: $pure-white;
         text-transform: uppercase;
@@ -953,12 +952,12 @@
     }
 
     &__btn {
-        font-family: 'Panchang', sans-serif;
-        font-weight: lighter;
+        font-family: 'Erode', serif;
+        font-weight: normal;
         background-color: transparent;
         color: $pure-white;
         padding: 10px 20px;
-        font-size: 16px;
+        font-size: 1.1rem;
         border: 1px solid $pure-white;
         border-radius: 5px;
         cursor: pointer;
@@ -1055,7 +1054,7 @@
     height: 20vh;
 
     &__title {
-        font-size: .8rem;
+        font-size: 1rem;
         font-weight: lighter;
         padding: 1em;
     }
@@ -1069,7 +1068,7 @@
 
     &__link {
         text-align: center;
-        font-size: .3rem;
+        font-size: .5rem;
         color: $pure-white;
         text-decoration: none;
         cursor: pointer;
@@ -1230,15 +1229,19 @@
 
             width: 100%;
         }
+
+        &--info {
+            border-bottom: 1px solid $pure-white;
+            padding-bottom: 1em;
+        }
     }
 
     &__btn {
+        font-family: 'Erode', serif;
         position: static;
         color: $dark;
-        font-family: 'Panchang', sans-serif;
-        font-weight: normal;
         font-optical-sizing: auto;
-        font-size: .8rem;
+        font-size: 1rem;
         background-color: transparent;
         border: none;
         margin: .5em 0;
@@ -1251,14 +1254,14 @@
         position: relative;
         font-weight: lighter;
         text-transform: uppercase;
-        font-size: 1.3rem;
+        font-size: 2rem;
         text-align: center;
         color: $pure-white;
         animation: titleAnimation 2s ease-in-out forwards;
 
         &--local,
         &--premium {
-            margin-top: 4em;
+            margin-top: 3em;
             margin-bottom: 1em;
         }
 
@@ -1276,9 +1279,8 @@
     }
 
     &__text {
-        font-family: "Playfair", serif;
-        font-weight: light;
-        font-size: 1.2rem;
+
+        font-size: 1rem;
         padding: .5em;
 
         &--makeup {
@@ -1286,7 +1288,7 @@
         }
 
         &--italic {
-            font-family: "Playfair", serif;
+            color: $pure-white;
             font-style: italic;
             font-size: 1rem;
 
@@ -1340,7 +1342,7 @@
         text-align: center;
         color: $dark;
         padding: .5em;
-        font-weight: lighter;
+        font-weight: normal;
         margin-bottom: 1em;
 
         &--premium {
@@ -1349,8 +1351,7 @@
     }
 
     &__text {
-        font-family: "Playfair", serif;
-        font-weight: normal;
+
         font-size: 1rem;
         padding: .5em;
         margin-bottom: 1em;
@@ -1367,12 +1368,12 @@
     }
 
     &__element {
-        font-size: .8rem;
+        font-size: .9rem;
         margin-bottom: 1em;
     }
 
     &__extra {
-        font-size: .9rem;
+        font-size: .6rem;
 
     }
 
@@ -1403,9 +1404,8 @@
     }
 
     &__element {
-
-        font-size: 1rem;
-        margin-bottom: 1em;
+        font-size: .9rem;
+        margin-bottom: .5em;
 
     }
 
@@ -1421,8 +1421,8 @@
 
     &__element {
 
-        font-size: 1rem;
-        margin-bottom: 1em;
+        font-size: .9rem;
+        margin-bottom: .5em;
 
     }
 
@@ -1437,6 +1437,14 @@
         position: relative;
         border-top: 3px solid $dark;
         border-bottom: 3px solid $dark;
+
+        &--mobile {
+            display: block;
+        }
+
+        &--desktop {
+            display: none;
+        }
     }
 
     &__box {
@@ -1444,6 +1452,7 @@
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
+        border-bottom: 1px solid $pure-white;
 
         &--list {
             width: 100%;
@@ -1455,6 +1464,7 @@
             align-items: center;
             padding: 0 .5em;
             width: 100%;
+            padding-bottom: 1em;
         }
     }
 
@@ -1498,11 +1508,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../../../dist/img/szkolenia7.jpg');
+            background-image: url('../../../dist/img/szkolenia7_black.jpg');
             background-size: cover;
             background-position: 55% 50%;
             background-repeat: no-repeat;
-            opacity: .3;
+            opacity: .2;
             z-index: -1;
 
 
@@ -1510,8 +1520,9 @@
         }
 
         &--local {
+            opacity: .1;
             background-position: 40%;
-            background-image: url('../../../dist/img/salonowe1.jpg');
+            background-image: url('../../../dist/img/salonowe1_black.jpg');
         }
 
 
@@ -1520,21 +1531,35 @@
 
     &__title {
         color: $pure-white;
+        font-weight: normal;
         font-size: 1.2rem;
         margin: 1em 0;
         padding: .5em;
+
+        &--local {
+            font-size: 1.4rem;
+        }
     }
 
     &__list {
         list-style: inside;
-        padding: .5em 0;
+        padding: .5em .5em;
+
+
 
     }
 
     &__element {
+        text-align: left;
         color: $pure-white;
-        font-size: 1rem;
+        font-size: .8rem;
         margin-bottom: 1em;
+
+        &--local {
+            text-align: center;
+            font-size: 1rem;
+
+        }
     }
 
     &__gallery {
@@ -1597,17 +1622,63 @@
 }
 
 .border {
-    &__title{
+    &__title {
         color: $dark;
         margin-bottom: 2em;
         margin-top: 4em;
     }
-    &__container{
+
+    &__container {
         background-color: $pure-white;
     }
 
-    &__text{
+    &__text {
         text-align: center;
+
+    }
+}
+
+.local {
+    &__container {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 1px;
+            background-color: $pure-white
+        }
+
+
+        &--mobile {
+            display: block;
+            padding-bottom: .5em;
         
+        }
+    }
+}
+
+.privacy{
+    text-align: center;
+    padding: .5em 1em;
+
+    &__list{
+        list-style: none;
+        margin-bottom: 1em;
+    }
+
+    &__element{
+        font-size: 1.2rem;
+        padding: .5em 0;
+    }
+
+    &__title{
+        font-weight: normal;
+        font-size: 2rem;
+        margin-bottom: 1em;
     }
 }
