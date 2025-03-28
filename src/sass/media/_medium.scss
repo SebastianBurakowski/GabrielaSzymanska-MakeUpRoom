@@ -277,6 +277,7 @@
     }
 
     .about {
+        border-bottom: none;
         &__container {
             display: flex;
             justify-content: space-between;
@@ -310,6 +311,7 @@
     }
 
     .hero {
+        display: block;
         height: 60vh;
         box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
 
