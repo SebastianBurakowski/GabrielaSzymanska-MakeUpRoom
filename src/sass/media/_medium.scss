@@ -278,6 +278,7 @@
 
     .about {
         border-bottom: none;
+
         &__container {
             display: flex;
             justify-content: space-between;
@@ -606,7 +607,7 @@
                 position: absolute;
                 bottom: 0;
                 left: 5%;
-                background-image: url('../../../dist/img/szkolenia7.jpg');
+                background-image: url('../../../dist/img/szkolenia_glowna.jpg');
             }
 
             &--second {
@@ -614,14 +615,14 @@
                 top: 5%;
                 left: 50%;
                 transform: translateX(-50%);
-                background-image: url('../../../dist/img/szkolenia6.jpg');
+                background-image: url('../../../dist/img/szkolenia_glowna2.jpeg');
             }
 
             &--third {
                 position: absolute;
                 right: 5%;
                 bottom: 0;
-                background-image: url('../../../dist/img/szkolenia5.jpg');
+                background-image: url('../../../dist/img/szkolenia_glowna3.jpg');
             }
         }
     }
@@ -682,9 +683,10 @@
 
     }
 
-    .social-link{
+    .social-link {
         transition: transform 1s;
-        &:hover{
+
+        &:hover {
             transform: scale(1.2);
         }
     }
@@ -729,8 +731,8 @@
             font-size: 1.4rem;
         }
 
-        &__container{
-            &--info{
+        &__container {
+            &--info {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -833,8 +835,8 @@
     .premium {
         color: $pure-white;
 
-        &__box{
-            &--price{
+        &__box {
+            &--price {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
@@ -873,7 +875,7 @@
                 font-size: 1rem;
             }
 
-            &--info{
+            &--info {
                 font-size: .7rem;
             }
         }
@@ -884,7 +886,7 @@
             &--desktop {
                 font-size: 1.5rem;
                 width: 50%;
-               
+
 
             }
         }
@@ -933,12 +935,12 @@
                 justify-content: center;
                 align-items: center;
 
-                &::after{
+                &::after {
                     position: absolute;
                     content: '';
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%,-50%);
+                    transform: translate(-50%, -50%);
                     width: 1px;
                     height: 20%;
                     background-color: $pure-white;
@@ -946,6 +948,45 @@
             }
 
 
+        }
+
+        &__hero {
+            &--elements {
+                flex-wrap: nowrap;
+            }
+
+            &--element {
+                width: 60vh;
+                height: 60vh;
+
+                &-1 {
+                    border-top: 2px solid $pure-white;
+                    border-right: none;
+                    border-bottom: 2px solid $pure-white;
+
+                }
+
+                &-2 {
+
+                    border-top: 2px solid $pure-white;
+                    border-right: none;
+                    border-bottom: 2px solid $pure-white;
+                }
+
+                &-3 {
+
+                    border-top: 2px solid $pure-white;
+                    border-right: none;
+                    border-bottom: 2px solid $pure-white;
+                }
+
+                &-4 {
+
+                    border-top: 2px solid $pure-white;
+
+                    border-bottom: 2px solid $pure-white;
+                }
+            }
         }
     }
 
