@@ -2,6 +2,15 @@
 @use '../variables' as *;
 
 @media (min-width: 1400px) {
+    .header{
+            &__title {
+                    font-size: 6rem;
+                }
+            
+                &__text {
+                    font-size: 1.7rem;
+                }
+    }
     .about {
         &__photo {
             width: 40%;

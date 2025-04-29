@@ -56,13 +56,11 @@
 
 
         &__photo {
-            width: 60%;
-            height: 80vh;
+           
+            height: 100vh;
         }
 
-        &__link {
-            bottom: -20%;
-        }
+      
     }
 }
 
@@ -99,35 +97,44 @@
     }
 
     .header {
-        background-color: $pure-white;
-
-
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &__title {
+            font-size: 5rem;
+        }
+
+        &__text {
+            font-size: 1.5rem;
+        }
+
+
+
 
         &__mobile {
             display: none;
         }
 
         &__desktop {
-            display: block;
+            display: flex;
+            flex-direction: column;
         }
 
 
 
         &__hero {
-            position: relative;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            background-image: url('../img/header_new.jpg');
+            background-attachment: fixed;
+            background-position: right;
             background-repeat: no-repeat;
             background-size: cover;
+            position: absolute;
             top: 0;
-            right: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            opacity: 1;
+            opacity: 0.4;
             z-index: -1;
 
             &--courses {
@@ -137,19 +144,7 @@
             }
         }
 
-        &__title {
-
-            text-align: right;
-            margin-top: 0;
-            font-size: 2rem;
-            color: $dark;
-            padding: 0;
-
-
-        }
-
         &__logo {
-            background-image: url(../../../dist/img/Gabriela_Szymańska_LOGO_page-0001.jpg);
             height: 7em;
             width: 11em;
             top: 20px;
@@ -1035,6 +1030,12 @@
             font-size: 1.7rem;
         }
     }
+
+    .facebook__title{
+        font-size: 2rem;
+    }
+
+  
 }
 
 
