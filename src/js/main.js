@@ -9,13 +9,8 @@ let aboutSectionImg;
 let heroImageFirst;
 let heroImageSecond;
 let heroSection;
-let offerSection
-let offerElements;
 let shopSection;
 let ShopImages;
-let coursesSectionMobile;
-let coursesSectionDesktop;
-let coursesImages;
 let navMobileItems;
 let trainingBtns;
 let contactForm;
@@ -38,13 +33,8 @@ const prepareDomElements = () => {
     heroImageFirst = document.querySelector('.hero__background--first')
     heroImageSecond = document.querySelector('.hero__background--second')
     heroSection = document.querySelector('.hero')
-    offerSection = document.querySelector('.offers')
-    offerElements = document.querySelectorAll('.offers__container--main')
     shopSection = document.querySelector('.shop')
     ShopImages = document.querySelectorAll('.shop__photo')
-    coursesSectionMobile = document.querySelector('.courses__mobile')
-    coursesSectionDesktop = document.querySelector('.courses__desktop')
-    coursesImages = document.querySelectorAll('.courses__photo')
     navMobileItems = document.querySelectorAll('.navbar__item')
     trainingBtns = document.querySelectorAll('.training__btn')
     contactForm = document.getElementById("contact-form");
@@ -115,23 +105,6 @@ const heroHandle = () => {
 
 }
 
-const handleShowOffer = () => {
-
-    const offerSectionTop = offerSection.getBoundingClientRect().top
-    if (offerSectionTop <= windowHeight * 0.6) {
-        offerElements.forEach((element, index) => {
-            element.style.animationDelay = `${index}s`;
-            element.classList.add('activeOffer');
-
-        });
-
-    } else {
-        // Jeśli sekcja nie jest widoczna, usuwamy animację z elementów
-        offerElements.forEach(element => {
-            element.classList.remove('activeOffer'); // Usuwamy klasę, aby zatrzymać animację
-        });
-    }
-};
 
 const handleShowShop = () => {
     const shopSectionTop = shopSection.getBoundingClientRect().top
@@ -140,7 +113,7 @@ const handleShowShop = () => {
         ShopImages.forEach((element, index) => {
             element.style.animationDelay = `${index}s`
             element.classList.add('activeShop')
-            console.log("object");
+          
             
         })
     } else {
@@ -154,30 +127,6 @@ const handleShowShop = () => {
 
 }
 
-
-
-const handleShowCourses = () => {
-    const windowHeight = window.innerHeight;
-
-    if (coursesSectionMobile) {
-        const coursesMobileTop = coursesSectionMobile.getBoundingClientRect().top;
-        if (coursesMobileTop <= windowHeight * 0.8) {
-            coursesSectionMobile.classList.add('coursesActive');
-        }
-    }
-
-    if (coursesSectionDesktop) {
-        const coursesDesktopTop = coursesSectionDesktop.getBoundingClientRect().top;
-        if (coursesDesktopTop <= windowHeight * 0.8) {
-            coursesImages.forEach((element, index) => {
-                if (!element.classList.contains('coursesActive')) {
-                    element.style.animationDelay = `${index * 0.3}s`;
-                    element.classList.add('coursesActive');
-                }
-            });
-        }
-    }
-}
 
 
 
@@ -207,7 +156,7 @@ const navHandle = () => {
 }
 
 // email
-emailjs.init("i9Yh5tm3sPPf_gO8l");
+emailjs.init("jHIfPX98y0hvZ0KKR");
 
 function sendEmail(event) {
     event.preventDefault(); // Zatrzymuje domyślną akcję wysyłania formularza
@@ -220,7 +169,7 @@ function sendEmail(event) {
     };
 
     // Wysyłka formularza przez EmailJS
-    emailjs.send("service_crfrei8", "template_z1pqleg", formData)
+    emailjs.send("service_r93wqo9", "template_z1pqleg", formData)
         .then(function (response) {
             alert("Wiadomość została wysłana!");
             console.log("SUCCESS:", response);
@@ -252,9 +201,7 @@ const prepareDomEvents = () => {
     if (isHome) {
         window.addEventListener("scroll", handleShowAbout);
         window.addEventListener("scroll", heroHandle);
-        window.addEventListener("scroll", handleShowOffer);
         window.addEventListener("scroll", handleShowShop);
-        window.addEventListener("scroll", handleShowCourses);
 
     }
 

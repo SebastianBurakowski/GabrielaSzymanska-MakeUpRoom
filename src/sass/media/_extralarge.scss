@@ -89,32 +89,32 @@
     }
 
     .courses {
-        margin-top: 3em;
-
-        &__link {
-            font-size: 2.3rem;
-            
-        }
-
-        &__photo {
-
-            width: 15vw;
-            height: 50vh;
-
-            &--second {
-                top: -10%;
+        &__container {
+                padding: 0 .5em;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                border-radius: 0;
+        
+                &--main {
+                    border-radius: 0;
+                    flex: 0 0 45%;
+                    /* 2 elementy w rzędzie */
+                    aspect-ratio: 1 / 1;
+                    /* kwadrat */
+                    box-sizing: border-box;
+                    margin: .5em;
+                    /* upewnij się, że nie ma marginesu */
+                    padding: 0;
+                    height: 60vh
+        
+        
+                }
+        
             }
 
-            &--first {
-                left: 10%;
-                bottom: -15%;
-            }
-
-            &--third {
-                right: 10%;
-                bottom: -15%;
-            }
-        }
     }
 
     .contact {
@@ -124,9 +124,8 @@
     }
 
     .training {
-
         &__header{
-            height: 80vh;
+            height: 95vh;
         }
         &__price {
             font-size: 2rem;
@@ -151,6 +150,7 @@
     .schedule {
         &__title {
             font-size: 2rem;
+
         }
 
         &__text{
@@ -251,6 +251,10 @@
         }
 
         
+    }
+
+    .button--salon{
+        margin-top: 20em;
     }
 }
 

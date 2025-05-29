@@ -174,7 +174,7 @@
         font-size: 2rem;
         color: $pure-white;
         margin-bottom: .2em;
-       
+
         animation: headerAnimation 2s 1s ease-in-out forwards;
 
         &--courses {
@@ -201,7 +201,7 @@
         font-size: 1.2rem;
         color: $pure-white;
         animation: headerAnimation 2s 2.5s ease-in-out forwards;
-        
+
 
     }
 
@@ -254,13 +254,13 @@
 @keyframes headerAnimation {
     0% {
         opacity: 0;
-        
+
 
     }
 
     100% {
         opacity: 1;
-    
+
     }
 
 }
@@ -435,6 +435,7 @@
     }
 
     &__link {
+        background-color: rgba(0, 0, 0, 0.461);
         &--mobile {
             text-align: center;
             position: relative;
@@ -552,7 +553,7 @@
         flex-direction: column;
 
         &--main {
-            opacity: 0;
+            opacity: 1;
             width: 90vw;
             height: 100vw;
             margin-bottom: 2em;
@@ -569,20 +570,20 @@
     }
 }
 
-@keyframes offerAnimation {
-    0% {
-        opacity: 0;
-    }
+// @keyframes offerAnimation {
+//     0% {
+//         opacity: 0;
+//     }
 
-    100% {
-        opacity: 1;
-    }
+//     100% {
+//         opacity: 1;
+//     }
 
-}
+// }
 
-.activeOffer {
-    animation: offerAnimation 1.5s ease-in-out forwards;
-}
+// .activeOffer {
+//     animation: offerAnimation .5s ease-in-out forwards;
+// }
 
 
 .offer {
@@ -766,60 +767,57 @@
 }
 
 //COURSES
-
 .courses {
-
-
-
-    width: 100%;
-
-    &__mobile {
-        border-top: 1px solid $dark;
-    }
-
     &__desktop {
         display: none;
-    }
-
-    &__photo {
-        display: block;
-        opacity: 0;
-        z-index: 4;
-        position: relative;
-        margin-top: 1em;
-        width: 100%;
-        height: 70vh;
-        background-image: url('../../../dist/img/szkolenia_oferta.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        border-radius: 10px;
-    }
-
-    &__link {
-
-        position: absolute;
-        bottom: -17%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        font-size: 1.8rem;
-        color: $dark;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-        cursor: pointer;
-        margin-bottom: 1.5em;
-        padding: .5em;
-        width: 100%;
 
     }
 
-    &__span {
-        color: $pure-white;
+    &__element {
+        &--first,
+            &--second,
+            &--third,
+            &--fourth {
+        
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+        
+        
+        
+                &::after {
+                    opacity: .6;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $dark;
+                }
+        
+        
+        
+            }
+        &--first {
+            background-image: url('../../../dist/img/indywidualne_main.jpeg');
+        }
+
+        &--second {
+            background-image: url('../../../dist/img/grupowe__main.jpeg');
+        }
+
+        &--third {
+            background-image: url('../../../dist/img/salonowe_main.jpeg');
+        }
+
+        &--fourth {
+            background-image: url('../../../dist/img/train1.jpeg');
+        }
     }
+
 }
+
 
 @keyframes coursesAnimation {
     0% {
@@ -965,6 +963,7 @@
         width: 100%;
         height: 100vh;
         background: url('../../../dist/img/szkolenia1.jpg') no-repeat center center/cover;
+        background-attachment:scroll;
         z-index: 0;
     }
 
@@ -1049,9 +1048,9 @@
 }
 
 .right {
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
+    display: none;
     margin-bottom: 1em;
 
 }
@@ -1085,7 +1084,7 @@
     background-color: $dark;
     color: $pure-white;
     text-align: center;
-    height: 20vh;
+    height: 15vh;
 
     &__title {
         font-size: 1rem;
@@ -1109,11 +1108,12 @@
     }
 
     &__text {
-        font-size: .4rem;
+        font-size: .6rem;
         position: absolute;
         bottom: 0;
         right: 0;
-        padding: .5em;
+        padding: 1em;
+
     }
 
     &__dev {
@@ -1231,6 +1231,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         width: 100%;
         height: 30vh;
         background-color: $dark;
@@ -1243,7 +1244,6 @@
             background-color: $pure-white;
             color: $dark;
         }
-
     }
 
     &__span {
@@ -1262,7 +1262,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
+padding: 0 .5em;
             width: 100%;
         }
 
@@ -1369,10 +1369,8 @@
 
 .lessons {
     &__container {
-        border-top: 1px solid $dark;
-        border-bottom: 1px solid $dark ;
+
         padding: 1em .5em;
-        background: radial-gradient(circle, rgba(250, 225, 221, 1) 0%, rgba(248, 237, 235, 1) 100%);
     }
 }
 
@@ -1762,21 +1760,20 @@
 
             &-1 {
                 background-image: url('../../../dist/img/lokalne1.jpg');
-                border-right: 2px solid $pure-white;
-                border-bottom: 2px solid $pure-white;
+               
 
             }
 
             &-2 {
                 background-image: url('../../../dist/img/lokalne2.jpg');
                 animation-delay: .5s;
-                border-bottom: 2px solid $pure-white;
+                
             }
 
             &-3 {
                 background-image: url('../../../dist/img/lokalne3.jpg');
                 animation-delay: 1s;
-                border-right: 2px solid $pure-white;
+                
             }
 
             &-4 {
@@ -1825,8 +1822,8 @@
     margin-top: 1em;
 }
 
-.facebook{
-   margin-top: 2em;
+.facebook {
+    margin-top: 2em;
     text-align: center;
     width: 100%;
     height: 100vh;
@@ -1836,11 +1833,10 @@
     flex-direction: column;
     overflow: hidden;
 
-    &__title{
+    &__title {
         text-align: center;
         font-size: 1.5rem;
         font-family: "Boska";
         font-weight: lighter;
     }
 }
-

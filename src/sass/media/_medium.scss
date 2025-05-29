@@ -41,6 +41,15 @@
         }
     }
 
+    .right {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        margin-bottom: 1em;
+    }
+
+
 }
 
 
@@ -56,16 +65,28 @@
 
 
         &__photo {
-           
+
             height: 100vh;
         }
 
-      
+
     }
 }
 
 
 @media (min-width : 992px) {
+    .footer {
+        height: 15vh;
+
+        &__title {
+            font-size: 1rem;
+        }
+
+        &__link {
+            font-size: .7rem;
+        }
+    }
+
     .hidden {
         position: absolute;
         opacity: 0;
@@ -544,9 +565,6 @@
     }
 
     .courses {
-        height: 80vh;
-        position: relative;
-
         &__mobile {
             display: none;
         }
@@ -555,71 +573,30 @@
             display: block;
         }
 
-        &__link {
-            &--desktop {
-
-                top: 90%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 30%;
-                cursor: pointer;
-                font-size: 1.5rem;
-
-                &::after {
-                    position: absolute;
-                    content: '';
-                    bottom: 35%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    height: 1px;
-                    width: 10%;
-                    background-color: $dark;
-
-                }
-            }
-
-        }
-
         &__container {
-            width: 100%;
+            padding: 0 .5em;
             display: flex;
-            justify-content: space-evenly;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
+            width: 100%;
+            border-radius: 0;
+
+            &--main {
+                border-radius: 0;
+                flex: 0 0 45%;
+                /* 2 elementy w rzędzie */
+                aspect-ratio: 1 / 1;
+                /* kwadrat */
+                box-sizing: border-box;
+                margin: .5em;
+                /* upewnij się, że nie ma marginesu */
+                padding: 0;
+                height: 60vh
+            }
+
         }
 
-        &__photo {
-
-            width: 20vw;
-            height: 40vh;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
-
-
-
-            &--first {
-                position: absolute;
-                bottom: 0;
-                left: 5%;
-                background-image: url('../../../dist/img/szkolenia_glowna.jpg');
-            }
-
-            &--second {
-                position: absolute;
-                top: 5%;
-                left: 50%;
-                transform: translateX(-50%);
-                background-image: url('../../../dist/img/szkolenia_glowna2.jpeg');
-            }
-
-            &--third {
-                position: absolute;
-                right: 5%;
-                bottom: 0;
-                background-image: url('../../../dist/img/szkolenia_glowna3.jpg');
-            }
-        }
     }
 
     .review {
@@ -640,6 +617,7 @@
         &__container {
             flex-direction: row;
             background-attachment: fixed;
+            background-position: 50% 30%;
 
         }
 
@@ -650,393 +628,382 @@
             text-align: center;
             margin-bottom: 5em;
         }
-
-
     }
-
-    .form-group input,
-    .form-group textarea {
-
-        width: 60%;
-    }
-
-    .right {
-        flex-direction: column;
-        width: 20%;
-
-
-    }
-
-    .social-icons {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        height: 50%;
-
-        font-size: 2.5rem;
-
-    }
-
-    .social-link {
-        transition: transform 1s;
-
-        &:hover {
-            transform: scale(1.2);
+    
+        .form-group input,
+        .form-group textarea {
+    
+            width: 60%;
         }
-    }
-
-
-    .phone {
-
-        font-size: 1.3rem;
-
-    }
-
-    .footer {
-        height: 13vh;
-
-        &__title {
-            font-size: 1rem;
+    
+        .right {
+            flex-direction: column;
+            width: 20%;
+    
+    
         }
-
-        &__link {
-            font-size: .7rem;
-        }
-    }
-
-    .training {
-        &__background {
-            background-attachment: fixed;
-        }
-
-        &__header {
-            height: 50vh;
-        }
-
-        &__title {
-            font-size: 3rem;
-        }
-
-        &__text {
-            font-size: 1.1rem;
-        }
-
-        &__shop {
-            font-size: 1.4rem;
-        }
-
-        &__container {
-            &--info {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-            }
-        }
-
-
-    }
-
-    .lessons {
-        &__container {
-            margin-bottom: 1em;
-        }
-    }
-
-    .schedule {
-        &__container {
-            position: relative;
+    
+        .social-icons {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            width: 100%;
-
-
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 35%;
-                transform: translateY(-50%);
-                height: 100%;
-                width: 1px;
-                background-color: $dark;
+            flex-direction: column;
+            height: 50%;
+    
+            font-size: 2.5rem;
+    
+        }
+    
+        .social-link {
+            transition: transform 1s;
+    
+            &:hover {
+                transform: scale(1.2);
             }
-
-            &--premium {
-                display: block;
-                width: 70%;
-
-                &::after {
-                    display: none;
-
+        }
+    
+    
+        .phone {
+    
+            font-size: 1.3rem;
+    
+        }
+    
+    
+    
+        .training {
+            &__background {
+                background-attachment: fixed;
+            }
+    
+            &__header {
+                height: 50vh;
+            }
+    
+            &__title {
+                font-size: 3rem;
+            }
+    
+            &__text {
+                font-size: 1.1rem;
+            }
+    
+            &__shop {
+                font-size: 1.4rem;
+            }
+    
+            &__container {
+                &--info {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
                 }
             }
-
+    
+    
         }
-
-
-        &__element,
-        &__date {
-            font-size: 1.2rem;
-        }
-
-        &__extra {
-            font-size: .8rem;
-        }
-
-
-        &__title {
-
-            text-align: center;
-            width: 30%;
-            font-size: 1.5rem;
-
-            &--box {
-                width: 100%;
-            }
-
-            &--premium {
-                width: 50%;
-                font-size: 2rem;
+    
+        .lessons {
+            &__container {
+                margin-bottom: 1em;
             }
         }
-
-        &__text {
-            padding: 0 .5em;
-
-        }
-
-        &__info {
-            width: 60%;
-        }
-    }
-
-    .gallery {
-        &__elements {
-            flex-direction: row;
-            width: 100%;
-        }
-
-        &__element {
-            height: 80vh;
-            flex: 1;
-        }
-    }
-
-
-    .premium {
-        color: $pure-white;
-
-        &__box {
-            &--price {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                flex-direction: column;
-            }
-        }
-
-        &__list {
-            &--desktop {
-                width: 50%;
-            }
-        }
-
-        &__section {
-            &--mobile {
-                display: none;
-            }
-
-            &--desktop {
-                display: block;
-            }
-        }
-
-        &__container {
-            &--background {
-                background-attachment: fixed;
-                background-position: 10% 30%;
-            }
-        }
-
-        &__element {
-            font-size: .9rem;
-            padding: 0 2em;
-
-            &--local {
-                font-size: 1rem;
-            }
-
-            &--info {
-                font-size: .7rem;
-            }
-        }
-
-        &__title {
-            width: 100%;
-
-            &--desktop {
-                font-size: 1.5rem;
-                width: 50%;
-
-
-            }
-        }
-
-        &__background {
-            position: relative;
-            width: 30vw;
-            height: 90vh;
-
-            &::after {
-                position: absolute;
-                content: '';
-                left: -100px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 1px;
-                height: 70%;
-                background-color: $pure-white;
-            }
-        }
-
-        &__box {
-            flex-direction: row;
-
-            &--list {
-                width: 50%;
-            }
-
-            &--photo {
-                width: 50%;
-            }
-        }
-    }
-
-    .border {
-        &__container {
-            height: 80vh;
-        }
-    }
-
-    .local {
-        &__container {
-            &--desktop {
+    
+        .schedule {
+            &__container {
                 position: relative;
                 display: flex;
-                justify-content: center;
+                justify-content: space-evenly;
                 align-items: center;
-
+                width: 100%;
+    
+    
+    
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 35%;
+                    transform: translateY(-50%);
+                    height: 100%;
+                    width: 1px;
+                    background-color: $dark;
+                }
+    
+                &--premium {
+                    display: block;
+                    width: 70%;
+    
+                    &::after {
+                        display: none;
+    
+                    }
+                }
+    
+            }
+    
+    
+            &__element,
+            &__date {
+                font-size: 1.2rem;
+            }
+    
+            &__extra {
+                font-size: .8rem;
+            }
+    
+    
+            &__title {
+    
+                text-align: center;
+                width: 30%;
+                font-size: 1.5rem;
+    
+                &--box {
+                    width: 100%;
+                }
+    
+                &--premium {
+                    width: 50%;
+                    font-size: 2rem;
+                }
+            }
+    
+            &__text {
+                padding: 0 .5em;
+    
+            }
+    
+            &__info {
+                width: 60%;
+            }
+        }
+    
+        .gallery {
+            &__elements {
+                flex-direction: row;
+                width: 100%;
+            }
+    
+            &__element {
+                height: 80vh;
+                flex: 1;
+            }
+        }
+    
+    
+        .premium {
+            color: $pure-white;
+    
+            &__box {
+                &--price {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+    
+            &__list {
+                &--desktop {
+                    width: 50%;
+                }
+            }
+    
+            &__section {
+                &--mobile {
+                    display: none;
+                }
+    
+                &--desktop {
+                    display: block;
+                }
+            }
+    
+            &__container {
+                &--background {
+                    background-attachment: fixed;
+                    background-position: 10% 30%;
+                }
+            }
+    
+            &__element {
+                font-size: .9rem;
+                padding: 0 2em;
+    
+                &--local {
+                    font-size: 1rem;
+                }
+    
+                &--info {
+                    font-size: .7rem;
+                }
+            }
+    
+            &__title {
+                width: 100%;
+    
+                &--desktop {
+                    font-size: 1.5rem;
+                    width: 50%;
+    
+    
+                }
+            }
+    
+            &__background {
+                position: relative;
+                width: 30vw;
+                height: 90vh;
+    
                 &::after {
                     position: absolute;
                     content: '';
+                    left: -100px;
                     top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    transform: translateY(-50%);
                     width: 1px;
-                    height: 20%;
+                    height: 70%;
                     background-color: $pure-white;
                 }
             }
-
-
-        }
-
-        &__hero {
-            &--elements {
-                flex-wrap: nowrap;
-            }
-
-            &--element {
-                width: 60vh;
-                height: 60vh;
-
-                &-1 {
-                    border-top: 2px solid $pure-white;
-                    border-right: none;
-                    border-bottom: 2px solid $pure-white;
-
+    
+            &__box {
+                flex-direction: row;
+    
+                &--list {
+                    width: 50%;
                 }
-
-                &-2 {
-
-                    border-top: 2px solid $pure-white;
-                    border-right: none;
-                    border-bottom: 2px solid $pure-white;
-                }
-
-                &-3 {
-
-                    border-top: 2px solid $pure-white;
-                    border-right: none;
-                    border-bottom: 2px solid $pure-white;
-                }
-
-                &-4 {
-
-                    border-top: 2px solid $pure-white;
-
-                    border-bottom: 2px solid $pure-white;
+    
+                &--photo {
+                    width: 50%;
                 }
             }
         }
-    }
-
-    .timetable {
-
-
-        &__element {
-
-            font-size: 1.2rem;
-
+    
+        .border {
+            &__container {
+                height: 80vh;
+            }
+        }
+    
+        .local {
+            &__container {
+                &--desktop {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 1px;
+                        height: 20%;
+                        background-color: $pure-white;
+                    }
+                }
+    
+    
+            }
+    
+            &__hero {
+                &--elements {
+                    flex-wrap: nowrap;
+                }
+    
+                &--element {
+                    width: 60vh;
+                    height: 60vh;
+    
+                    &-1 {
+    
+                        border: none;
+    
+    
+                    }
+    
+                    &-2 {
+    
+                        border: none;
+                    }
+    
+                    &-3 {
+    
+                        border: none;
+                    }
+    
+                    &-4 {
+    
+                        border: none;
+                    }
+                }
+            }
+        }
+    
+        .timetable {
+    
+    
+            &__element {
+    
+                font-size: 1.2rem;
+    
+            }
+    
+            &__time {
+                font-size: 1.2rem;
+            }
+        }
+    
+    
+        .checklist {
+    
+    
+            &__element {
+                font-size: 1.2rem;
+                margin-bottom: .5em;
+    
+            }
+    
+            &__time {
+                font-size: 1.7rem;
+            }
+        }
+    
+        .included {
+            &__list {
+                list-style: inside;
+            }
+    
+            &__element {
+    
+                font-size: 1.2rem;
+                margin-bottom: .5em;
+    
+            }
+    
+            &__time {
+                font-size: 1.7rem;
+            }
+        }
+    
+        .facebook__title {
+            font-size: 2rem;
         }
 
-        &__time {
-            font-size: 1.2rem;
-        }
-    }
 
-
-    .checklist {
-
-
-        &__element {
-            font-size: 1.2rem;
-            margin-bottom: .5em;
-
-        }
-
-        &__time {
-            font-size: 1.7rem;
-        }
-    }
-
-    .included {
-        &__list {
-            list-style: inside;
-        }
-
-        &__element {
-
-            font-size: 1.2rem;
-            margin-bottom: .5em;
-
-        }
-
-        &__time {
-            font-size: 1.7rem;
-        }
-    }
-
-    .facebook__title{
-        font-size: 2rem;
-    }
-
-  
 }
+
+
+
+
+
+
+
 
 
 
